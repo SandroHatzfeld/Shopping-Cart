@@ -32,7 +32,7 @@ export default function Home() {
               einer Hand zu bieten, damit du dich voll und ganz auf deine Musik
               konzentrieren kannst. Entdecke jetzt unsere musikalische Welt!
             </p>
-            <Button />
+            <Button text='Jetzt Equipment entdecken' link='shop' />
           </div>
         </section>
       </main>
