@@ -1,13 +1,12 @@
 import Footer from "../components/Footer.jsx"
 import Navigation from "../components/Navigation.jsx"
 import ImageSlider from "../components/ImageSlider.jsx"
-import Button from "../components/Button.jsx"
+import LinkButton from "../components/LinkButton.jsx"
 
 export default function Home() {
   return (
     <>
       <Navigation />
-
       <main>
         <ImageSlider />
         <section>
@@ -32,7 +31,7 @@ export default function Home() {
               einer Hand zu bieten, damit du dich voll und ganz auf deine Musik
               konzentrieren kannst. Entdecke jetzt unsere musikalische Welt!
             </p>
-            <Button text='Jetzt Equipment entdecken' link='shop' />
+            <LinkButton text='Jetzt Equipment entdecken' link='shop' />
           </div>
         </section>
       </main>

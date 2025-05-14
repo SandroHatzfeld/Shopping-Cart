@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Icon from './Icon.jsx'
+import LinkImage from './LinkImage.jsx'
 
 export default function Navigation() {
   return (
@@ -10,8 +10,8 @@ export default function Navigation() {
         <Link to='/shop'>Shop</Link>
       </div>
 			<div>
-				<Icon />
-				<Icon />
+				<LinkImage icon='./assets/icons/profile.svg' alt='Zum Profil' link='profile' />
+				<LinkImage icon='./assets/icons/cart.svg' alt='Zum Warenkorb' link='cart' />
 			</div>
     </nav>
   )

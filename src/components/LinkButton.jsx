@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
 
-export default function Button({ text = "Jetzt entdecken", link = "/" }) {
+export default function LinkButton({ text = "Jetzt entdecken", link = "/" }) {
   return <Link to={link}>{text}</Link>
 }

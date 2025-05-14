@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function ErrorPage() {
 	return <div>
 		<h1>Oops, es ist ein Fehler passiert.</h1>
