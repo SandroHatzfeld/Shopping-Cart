@@ -44,10 +44,26 @@ nav {
 		text-decoration: none;
 		display: inline-block;
 		// transition: font-weight ease 0.3s;
+		position: relative;
+
+		&::after {
+			content: '';
+			height: 2px;
+			width: 0%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: $lightColor;
+			transition: width ease 0.3s;
+		}
 	}
 
 	a.active {
 		font-weight: 600;
+
+		&::after {
+			width: 100%;
+		}
 	}
 
   .logo {
