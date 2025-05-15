@@ -29,8 +29,9 @@ body {
   padding: 0;
 }
 
-a, button {
-	cursor: pointer;
+a,
+button {
+  cursor: pointer;
 }
 nav {
   padding: 0 2rem;
@@ -102,86 +103,85 @@ nav {
   }
 }
 
-.slider-wrapper {
+section {
   width: 100%;
   height: 400px;
   display: grid;
   grid-template-columns: 1fr 2fr;
+}
 
-  .slider-content-container,
-  .slider-image-container {
-    overflow: hidden;
-		position: relative;
+.slider-content-container,
+.slider-image-container {
+  overflow: hidden;
+  position: relative;
 
-    .slider-content-item {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      background-color: $secondaryColor;
+  .slider-content-item {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: $secondaryColor;
+  }
+}
+
+.slider-content-slide,
+.slider-image-slide {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 100%);
+  transition: translate ease 0.3s;
+}
+
+.slider-image-slide {
+  align-content: center;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.slider-dots-container,
+.slider-buttons-container {
+  z-index: 10;
+  position: absolute;
+}
+
+.slider-dots-container {
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    width: 0.75rem;
+    height: 0.75rem;
+    padding: 0;
+    padding-block: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: $lightColor;
+
+    &.active {
+      background-color: $accentColor;
     }
   }
+}
 
-  .slider-content-slide,
-  .slider-image-slide {
-		height: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 100%);
-    transition: translate ease 0.3s;
+.slider-buttons-container {
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+
+  button {
+    height: 2rem;
+    width: 1.33rem;
+    border: none;
+    border-radius: 0;
+    background-color: transparentize($lightColor, $amount: 0.2);
   }
-
-  .slider-image-slide {
-		align-content: center;
-    z-index: 0;
-		
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-	.slider-dots-container, .slider-buttons-container {
-		z-index: 10;
-		position: absolute;
-	}
-
-	.slider-dots-container {
-		bottom: 1rem;
-		left: 1rem;
-		display: flex;
-		gap: 0.5rem;
-
-		button {
-			width: 0.75rem;
-			height: 0.75rem;
-			padding: 0;
-			padding-block: 0;
-			border: none;
-			border-radius: 100%;
-			background-color: $lightColor;
-
-			&.active {
-				background-color: $accentColor;
-			}
-		}
-	}
-
-	.slider-buttons-container {
-		padding: 0 0.5rem;
-		box-sizing: border-box;
-		top: 50%;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		transform: translateY(-50%);
-
-		button {
-			height: 2rem;
-			width: 1.33rem;
-			border: none;
-			border-radius: 0;
-			background-color: transparentize($lightColor, $amount: 0.2);
-		}
-	}
-	
 }

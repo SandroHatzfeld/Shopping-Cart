@@ -5,10 +5,7 @@ import LinkButton from "./LinkButton.jsx"
 export default function ImageSlider() {
   const [sliderIndex, setSliderIndex] = useState(0)
 
-
-  const prevItem = () => {
-    setSliderIndex(sliderIndex - 1)
-  }
+  
   return (
     <section className="slider-wrapper">
       <div className="slider-content-container">
@@ -42,14 +39,14 @@ export default function ImageSlider() {
               <button
                 key={index}
                 onClick={() => setSliderIndex(index)}
-                className={sliderIndex % sliderItems.length === index ? "active" : ""}
+                className={sliderIndex === index ? "active" : ""}
               ></button>
             )
           })}
         </div>
         <div className="slider-buttons-container">
-          <button onClick={() => setSliderIndex(sliderIndex ? sliderIndex - 1 :  sliderItems.length - 1 )}>-</button>
-          <button onClick={() => setSliderIndex((sliderIndex + 1) )}>+</button>
+          <button onClick={() => setSliderIndex(sliderIndex ? sliderIndex - 1 :  sliderItems.length - 1 )}>«</button>
+          <button onClick={() => setSliderIndex((sliderIndex + 1) % sliderItems.length )}>»</button>
         </div>
       </div>
     </section>
