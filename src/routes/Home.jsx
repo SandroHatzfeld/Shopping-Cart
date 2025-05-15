@@ -1,5 +1,3 @@
-import Footer from "../components/Footer.jsx"
-import Navigation from "../components/Navigation.jsx"
 import ImageSlider from "../components/ImageSlider.jsx"
 import LinkButton from "../components/LinkButton.jsx"
 

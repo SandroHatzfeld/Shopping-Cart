@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import LinkImage from './LinkImage.jsx'
 
 export default function Navigation() {
   return (
     <nav>
       <div>
-        <Link to='/'><img /></Link>
-        <Link to='/'>Startseite</Link>
-        <Link to='/shop'>Shop</Link>
+        <LinkImage icon='./assets/icons/logo_white.svg' alt='Museqi Logo' link='/'/>
+        <NavLink to='/'>Startseite</NavLink>
+        <NavLink to='/shop'>Shop</NavLink>
       </div>
 			<div>
 				<LinkImage icon='./assets/icons/profile.svg' alt='Zum Profil' link='profile' />
