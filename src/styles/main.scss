@@ -32,12 +32,17 @@ body {
 a,
 button {
   cursor: pointer;
-	text-decoration: none;
+  text-decoration: none;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: 80px auto 80px;
+  min-height: 100vh;
 }
 
 nav {
   padding: 0 2rem;
-  height: 80px;
   background-color: $primaryColor;
   color: $lightColor;
   display: flex;
@@ -102,26 +107,29 @@ nav {
     font-weight: 600;
   }
 }
+main {
+  display: grid;
+  grid-template-rows: repeat(2, 570px);
+}
 
 section {
   width: 100%;
-  height: 400px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   background-color: $secondaryColor;
+}
+
+.text-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .slider-content-container,
 .slider-image-container {
   overflow: hidden;
   position: relative;
-
-  .slider-content-item {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
 }
 
 .slider-content-slide,
@@ -138,7 +146,8 @@ section {
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
 }
 .slider-dots-container,
@@ -191,17 +200,16 @@ section {
     height: 100%;
     width: 100%;
     overflow: hidden;
-		display: flex;
-		align-items: center;
+    display: flex;
+    align-items: center;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
-  .text-content {
-    padding: 1rem;
-  }
+
 
   h1 {
     margin-top: 0;
@@ -209,15 +217,14 @@ section {
 }
 
 footer {
-	width: 100%;
-	height: 80px;
-	background-color: $primaryColor;
-	color: $lightColor;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	a {
-		color: inherit;
-	}
+  width: 100%;
+  background-color: $primaryColor;
+  color: $lightColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: inherit;
+  }
 }

@@ -15,7 +15,7 @@ export default function ImageSlider() {
         >
           {sliderItems.map((item, index) => {
             return (
-              <div key={index} className="slider-content-item">
+              <div key={index} className="slider-content-item text-content">
                 <h1>{item.title}</h1>
                 <p>{item.text}</p>
                 <LinkButton link={item.link} text={item.linkText}></LinkButton>
