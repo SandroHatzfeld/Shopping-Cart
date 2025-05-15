@@ -1,10 +1,12 @@
 @font-face {
 	font-family: Roboto;
-	src: url(./assets/fonts/Roboto-VariableFont_wdth,wght.ttf) format(truetype);
+	src: url('./assets/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+	font-weight: 400;
 }
 @font-face {
 	font-family: "Roboto Italic";
-	src: url(./assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf) format(truetype);
+	src: url('./assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+	font-weight: 400;
 }
 
 $primaryColor: #2e3a43;
@@ -78,5 +80,17 @@ nav {
 		img {
 			height: 100%;
 		}
+	}
+}
+
+.link-button {
+	padding: 0.4rem 1.25rem;
+	background-color: $accentColor;
+	color: $lightColor;
+	font-family: inherit;
+	text-decoration: inherit;
+
+	&:hover {
+		font-weight: 600;
 	}
 }
