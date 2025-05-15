@@ -5,13 +5,13 @@ export default function Navigation() {
   return (
     <nav>
       <div>
-        <LinkImage icon='./assets/icons/logo_white.svg' alt='Museqi Logo' link='/'/>
+        <LinkImage image='./assets/icons/logo_white.svg' alt='Museqi Logo' link='/' classes='logo'/>
         <NavLink to='/'>Startseite</NavLink>
         <NavLink to='/shop'>Shop</NavLink>
       </div>
-			<div>
-				<LinkImage icon='./assets/icons/profile.svg' alt='Zum Profil' link='profile' />
-				<LinkImage icon='./assets/icons/cart.svg' alt='Zum Warenkorb' link='cart' />
+			<div >
+				<LinkImage image='./assets/icons/profile.svg' alt='Zum Profil' link='profile' classes='icon'/>
+				<LinkImage image='./assets/icons/cart.svg' alt='Zum Warenkorb' link='cart' classes='icon'/>
 			</div>
     </nav>
   )
