@@ -1,3 +1,12 @@
+@font-face {
+	font-family: Roboto;
+	src: url(./assets/fonts/Roboto-VariableFont_wdth,wght.ttf) format(truetype);
+}
+@font-face {
+	font-family: "Roboto Italic";
+	src: url(./assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf) format(truetype);
+}
+
 $primaryColor: #2e3a43;
 $secondaryColor: #f0eac6;
 $accentColor: #f06449;
@@ -6,6 +15,8 @@ $lightColor: #fefefe;
 
 :root {
 	font-size: 20px;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	font-weight: 400;
 }
 
 html, body {
@@ -26,12 +37,17 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-		gap: 0.5rem;
+		gap: 1rem;
   }
 	a {
 		color: $lightColor;
 		text-decoration: none;
 		display: inline-block;
+		// transition: font-weight ease 0.3s;
+	}
+
+	a.active {
+		font-weight: 600;
 	}
 
   .logo {
