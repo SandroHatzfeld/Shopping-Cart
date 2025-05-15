@@ -10,8 +10,8 @@ export default function Navigation() {
         <NavLink to='/shop'>Shop</NavLink>
       </div>
 			<div >
-				<LinkImage image='./assets/icons/profile.svg' alt='Zum Profil' link='profile' classes='icon'/>
-				<LinkImage image='./assets/icons/cart.svg' alt='Zum Warenkorb' link='cart' classes='icon'/>
+				<LinkImage image='./assets/icons/profile_white.svg' alt='Zum Profil' link='profile' classes='icon'/>
+				<LinkImage image='./assets/icons/cart_white.svg' alt='Zum Warenkorb' link='cart' classes='icon'/>
 			</div>
     </nav>
   )
