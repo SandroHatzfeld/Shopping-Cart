@@ -1,30 +1,22 @@
-import Home from './Home.jsx'
-import Shop from './Shop.jsx'
-import Cart from './Cart.jsx'
-import ErrorPage from './ErrorPage.jsx'
+import Home from "./Home.jsx"
+import Shop from "./Shop.jsx"
+import Cart from "./Cart.jsx"
+import ErrorPage from "./ErrorPage.jsx"
+import Root from "./Root.jsx"
 
 const routes = [
-	{
-		path: '/',
-		element: <Home />,
-		title: 'Willkommen bei Museqi',
-		errorElement: <ErrorPage />,
-	},
-	{
-		path: 'shop',
-		title: 'Museqi – Shop',
-		element: <Shop />,
-	},
-	{
-		path: 'profile',
-		title: 'Museqi – Profil',
-		element: <ErrorPage />,
-	},
-	{
-		path: 'cart',
-		title: 'Museqi – Warenkorb',
-		element: <Cart />,
-	},
+  {
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "shop", element: <Shop /> },
+      { path: "profile", element: <ErrorPage /> },
+      { path: "cart", element: <Cart /> },
+    ],
+  },
+
+  
 ]
 
 export default routes

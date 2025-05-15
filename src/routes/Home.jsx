@@ -6,7 +6,6 @@ import LinkButton from "../components/LinkButton.jsx"
 export default function Home() {
   return (
     <>
-      <Navigation />
       <main>
         <ImageSlider />
         <section>
@@ -35,7 +34,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   )
 }
