@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
-    <div>
+    <footer>
       <div>
         <a href=''>Impressum</a> | <a href=''>Datenschutz</a>
       </div>
-    </div>
+    </footer>
   )
 }

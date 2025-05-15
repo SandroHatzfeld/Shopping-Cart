@@ -6,9 +6,11 @@ export default function Home() {
     <>
       <main>
         <ImageSlider />
-        <section>
-          <img />
-          <div>
+        <section className="welcome">
+          <div className="image-container">
+            <img src="./assets/images/thumbs/team.jpg" />
+          </div>
+          <div className='text-content'>
             <h1>Willkommen bei Museqi</h1>
             <p>
               Seit 2009 ist es unsere Leidenschaft, dich mit einer sorgfältig
@@ -28,7 +30,7 @@ export default function Home() {
               einer Hand zu bieten, damit du dich voll und ganz auf deine Musik
               konzentrieren kannst. Entdecke jetzt unsere musikalische Welt!
             </p>
-            <LinkButton text='Jetzt Equipment entdecken' link='shop' />
+            <LinkButton text="Jetzt Equipment entdecken" link="shop" />
           </div>
         </section>
       </main>
