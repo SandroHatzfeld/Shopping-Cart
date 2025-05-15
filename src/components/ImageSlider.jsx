@@ -9,7 +9,7 @@ export default function ImageSlider() {
     <section className="slider-wrapper">
       <div className="slider-content-container">
         <div
-          className="slider-content"
+          className="slider-content-slide"
           style={{ translate: `${(sliderIndex % sliderItems.length) * -100}%` }}
         >
           {sliderItems.map((item, index) => {
@@ -23,17 +23,22 @@ export default function ImageSlider() {
           })}
         </div>
       </div>
-      <div className="slider-image">
-        {sliderItems.map((item, index) => {
-          return <img key={index} src={item.imageUrl} alt={item.linkText} />
-        })}
+      <div className="slider-image-container">
+        <div
+          className="slider-image-slide"
+          style={{ translate: `${(sliderIndex % sliderItems.length) * -100}%` }}
+        >
+          {sliderItems.map((item, index) => {
+            return <img key={index} src={item.imageUrl} alt={item.linkText} />
+          })}
+        </div>
         <div className="slider-dots-container">
           {sliderItems.map((item, index) => {
             return (
               <button
                 key={index}
                 onClick={() => setSliderIndex(index)}
-                className={sliderIndex === index && "active"}
+                className={sliderIndex % sliderItems.length === index ? "active" : ""}
               ></button>
             )
           })}

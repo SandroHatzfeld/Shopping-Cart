@@ -1,12 +1,14 @@
 @font-face {
-	font-family: Roboto;
-	src: url('./assets/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
-	font-weight: 400;
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 400;
 }
 @font-face {
-	font-family: "Roboto Italic";
-	src: url('./assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
-	font-weight: 400;
+  font-family: "Roboto Italic";
+  src: url("./assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 400;
 }
 
 $primaryColor: #2e3a43;
@@ -16,18 +18,22 @@ $darkColor: #2a2a2a;
 $lightColor: #fefefe;
 
 :root {
-	font-size: 20px;
-	font-family: Roboto, Arial, Helvetica, sans-serif;
-	font-weight: 400;
+  font-size: 20px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }
 
-html, body {
-	margin: 0;
-	padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
+a, button {
+	cursor: pointer;
+}
 nav {
-	padding: 0 2rem;
+  padding: 0 2rem;
   height: 80px;
   background-color: $primaryColor;
   color: $lightColor;
@@ -39,83 +45,143 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-		gap: 1rem;
+    gap: 1rem;
   }
-	a {
-		color: $lightColor;
-		text-decoration: none;
-		display: inline-block;
-		// transition: font-weight ease 0.3s;
-		position: relative;
+  a {
+    color: $lightColor;
+    text-decoration: none;
+    display: inline-block;
+    // transition: font-weight ease 0.3s;
+    position: relative;
 
-		&::after {
-			content: '';
-			height: 2px;
-			width: 0%;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			background-color: $lightColor;
-			transition: width ease 0.3s;
-		}
-	}
+    &::after {
+      content: "";
+      height: 2px;
+      width: 0%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $lightColor;
+      transition: width ease 0.3s;
+    }
+  }
 
-	a.active {
-		font-weight: 600;
+  a.active {
+    font-weight: 600;
 
-		&::after {
-			width: 100%;
-		}
-	}
+    &::after {
+      width: 100%;
+    }
+  }
 
   .logo {
-		height: 80%;
-   
-		img {
-			height: 100%;
-		}
+    height: 80%;
+
+    img {
+      height: 100%;
+    }
   }
-	.icon {
-		height: 40px;
-		img {
-			height: 100%;
-		}
-	}
+  .icon {
+    height: 40px;
+    img {
+      height: 100%;
+    }
+  }
 }
 
 .link-button {
-	padding: 0.4rem 1.25rem;
-	width: fit-content;
-	background-color: $accentColor;
-	color: $lightColor;
-	font-family: inherit;
-	text-decoration: inherit;
+  padding: 0.4rem 1.25rem;
+  width: fit-content;
+  background-color: $accentColor;
+  color: $lightColor;
+  font-family: inherit;
+  text-decoration: inherit;
 
-	&:hover {
-		font-weight: 600;
-	}
+  &:hover {
+    font-weight: 600;
+  }
 }
 
 .slider-wrapper {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 2fr;
+  width: 100%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 
-	.slider-content-container {
-		overflow: hidden;
+  .slider-content-container,
+  .slider-image-container {
+    overflow: hidden;
+		position: relative;
+
+    .slider-content-item {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-color: $secondaryColor;
+    }
+  }
+
+  .slider-content-slide,
+  .slider-image-slide {
+		height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    transition: translate ease 0.3s;
+  }
+
+  .slider-image-slide {
+		align-content: center;
+    z-index: 0;
 		
-		.slider-content {
-			display: grid;
-			grid-template-columns: repeat(4, 100%);
-			transition: translate ease 0.3s;
-		}
-		.slider-content-item {
-			padding: 1rem;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-			background-color: $secondaryColor;
-		}
 
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+	.slider-dots-container, .slider-buttons-container {
+		z-index: 10;
+		position: absolute;
 	}
+
+	.slider-dots-container {
+		bottom: 1rem;
+		left: 1rem;
+		display: flex;
+		gap: 0.5rem;
+
+		button {
+			width: 0.75rem;
+			height: 0.75rem;
+			padding: 0;
+			padding-block: 0;
+			border: none;
+			border-radius: 100%;
+			background-color: $lightColor;
+
+			&.active {
+				background-color: $accentColor;
+			}
+		}
+	}
+
+	.slider-buttons-container {
+		padding: 0 0.5rem;
+		box-sizing: border-box;
+		top: 50%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		transform: translateY(-50%);
+
+		button {
+			height: 2rem;
+			width: 1.33rem;
+			border: none;
+			border-radius: 0;
+			background-color: transparentize($lightColor, $amount: 0.2);
+		}
+	}
+	
 }
