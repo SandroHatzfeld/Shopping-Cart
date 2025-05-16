@@ -1,10 +1,19 @@
-import Playground from '../playground.jsx'
+import { NavLink, Outlet, useLoaderData } from "react-router-dom"
 
 export default function Shop() {
+  const data = useLoaderData()
+
+  
   return (
     <>
-      <h1>Das ist der Shop</h1>
-      <Playground />
+      <main id="shop">
+        <aside>
+          {data.map((category, index) => {
+            return <NavLink to={category} key={index}>{category}</NavLink>
+          })}
+        </aside>
+        <Outlet></Outlet>
+      </main>
     </>
   )
 }

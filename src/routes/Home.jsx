@@ -4,7 +4,7 @@ import LinkButton from "../components/LinkButton.jsx"
 export default function Home() {
   return (
     <>
-      <main>
+      <main id='home'>
         <ImageSlider />
         <section className="welcome">
           <div className="image-container">
