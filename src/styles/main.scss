@@ -36,6 +36,8 @@ a,
 button {
   cursor: pointer;
   text-decoration: none;
+  border: none;
+  border-radius: 0;
 }
 
 #root {
@@ -118,11 +120,6 @@ main {
   min-height: calc(100vh - $navHeight);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-}
-
-#shop {
-  grid-template-columns: 400px 1fr;
-  grid-template-rows: auto;
 }
 
 section {
