@@ -3,7 +3,8 @@ import Shop from "./Shop.jsx"
 import Cart from "./Cart.jsx"
 import ErrorPage from "./ErrorPage.jsx"
 import Root from "./Root.jsx"
-import ProductListing from './ProductListing.jsx'
+import ProductListing from "./ProductListing.jsx"
+import ProductDetailPage from './ProductDetailPage.jsx'
 
 const categoryLoader = async () => {
   return fetch("https://fakestoreapi.com/products/categories").then((res) =>
@@ -25,9 +26,15 @@ const routes = [
         element: <Shop />,
         loader: categoryLoader,
         children: [
-          { path: ":category", element: <ProductListing />, loader: productLoader },
+          {
+            path: ":category",
+            element: <ProductListing />,
+            loader: productLoader,
+            
+          },
         ],
       },
+      { path: ":productDetail", element: <ProductDetailPage /> ,loader: productLoader,},
       { path: "profile", element: <ErrorPage /> },
       { path: "cart", element: <Cart /> },
     ],

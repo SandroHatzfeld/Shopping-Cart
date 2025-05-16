@@ -57,6 +57,7 @@ aside {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 210px auto;
+  gap: 0.75rem;
   border: 1px solid $darkColor;
 
   img {

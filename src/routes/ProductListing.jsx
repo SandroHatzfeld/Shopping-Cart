@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 
 export default function ProductListing() {
   const productData = useLoaderData()
@@ -10,18 +10,24 @@ export default function ProductListing() {
         {productData.map((item) => {
           return (
             <div className="product-item" key={item.id}>
-              <img src={item.image} alt="" />
+              <Link to={`/${item.title}`}>
+                <img src={item.image} alt="" />
+              </Link>
               <div className="product-item-content">
-                <p className="title">{item.title}</p>
-                <div className='flex-bottom'>
-                  <p className="price">{item.price}</p>
+                <Link to={item.title}>
+                  <p className="title">{item.title}</p>
+                </Link>
+                <div className="flex-bottom">
+                  <p className="price">{item.price} €</p>
                   <div className="user-input">
                     <div className="amount-wrapper">
                       <button>-</button>
-                      <input type="number" defaultValue={1}/>
+                      <input type="number" defaultValue={1} />
                       <button>+</button>
                     </div>
-                    <button className="add-to-cart link-button">In den Warenkorb</button>
+                    <button className="add-to-cart link-button">
+                      In den Warenkorb
+                    </button>
                   </div>
                 </div>
               </div>
