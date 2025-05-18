@@ -28,7 +28,7 @@ export default function ProductListing() {
         {productData.map((item) => {
           return (
             <div className="product-item" key={item.id}>
-              <Link to={`/${item.title}`}>
+              <Link to={`/${item.title}`} className='product-item-image-link'>
                 <img src={item.image} alt="" />
               </Link>
               <div className="product-item-content">
