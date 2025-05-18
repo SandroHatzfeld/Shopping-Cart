@@ -25,13 +25,17 @@ const routes = [
         path: "shop",
         element: <Shop />,
         loader: categoryLoader,
-        children: [
+        children: [ 
           {
-            path: ":category",
+            index:true,
             element: <ProductListing />,
             loader: productLoader,
-            
           },
+          {
+            path:":category",
+            element:<ProductListing />,
+            loader: productLoader,
+          }
         ],
       },
       { path: ":productDetail", element: <ProductDetailPage /> ,loader: productLoader,},

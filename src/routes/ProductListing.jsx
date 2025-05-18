@@ -1,7 +1,25 @@
-import { Link, useLoaderData } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { Link, useLoaderData, useParams } from "react-router-dom"
 
 export default function ProductListing() {
-  const productData = useLoaderData()
+  const loaderData = useLoaderData()
+  const currentRoute = useParams()
+  const [productData, setProductData] = useState(loaderData)
+
+  // filter the loaded data once for the selected category
+  useEffect(() => {
+    if (Object.keys(currentRoute).length === 0) {
+      setProductData(loaderData)
+      return
+    }
+    const filteredProducts = loaderData.filter(
+      (item) => item.category === currentRoute.category
+    )
+
+    setProductData(filteredProducts)
+  }, [currentRoute, loaderData])
+
+  console.log(currentRoute)
 
   return (
     <div className="listing-wrapper">
