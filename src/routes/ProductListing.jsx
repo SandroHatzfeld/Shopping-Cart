@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useLoaderData, useParams } from "react-router-dom"
+import AmountInput from "../components/shop/AmountInput.jsx"
+import AddToCart from '../components/shop/AddToCart.jsx'
 
 export default function ProductListing() {
   const loaderData = useLoaderData()
@@ -37,14 +39,8 @@ export default function ProductListing() {
                 <div className="flex-bottom">
                   <p className="price">{item.price} €</p>
                   <div className="user-input">
-                    <div className="amount-wrapper">
-                      <button>-</button>
-                      <input type="number" defaultValue={1} />
-                      <button>+</button>
-                    </div>
-                    <button className="add-to-cart link-button">
-                      In den Warenkorb
-                    </button>
+                    <AmountInput />
+                    <AddToCart />
                   </div>
                 </div>
               </div>

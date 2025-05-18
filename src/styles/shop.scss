@@ -29,7 +29,8 @@ aside {
     a {
       color: $darkColor;
       text-decoration: none;
-      &.active, &:hover{
+      &.active,
+      &:hover {
         font-weight: 600;
       }
     }
@@ -52,6 +53,36 @@ aside {
   gap: 1rem;
   box-sizing: border-box;
 }
+
+.user-input {
+  align-self: flex-end;
+  justify-self: flex-end;
+  display: flex;
+  gap: 0.25rem;
+
+  .amount-wrapper {
+    height: 100%;
+    display: flex;
+
+    input,
+    button {
+      background-color: $secondaryColor;
+    }
+    button {
+      height: 39px;
+      width: 39px;
+    }
+    input {
+      -moz-appearance: textfield;
+      width: 50px;
+      text-align: center;
+      border: none;
+      border-left: 1px solid $darkColor;
+      border-right: 1px solid $darkColor;
+    }
+  }
+}
+
 .product-item {
   padding: 0.75rem;
   box-sizing: border-box;
@@ -62,7 +93,7 @@ aside {
 
   .product-item-image-link {
     overflow: hidden;
-    
+
     img {
       height: 100%;
       width: 100%;
@@ -89,34 +120,11 @@ aside {
         margin-bottom: 0.25rem;
         align-self: flex-end;
       }
-      .user-input {
-        align-self: flex-end;
-        justify-self: flex-end;
-        display: flex;
-        gap: 0.25rem;
-
-        .amount-wrapper {
-          height: 100%;
-          display: flex;
-
-          input,
-          button {
-            background-color: $secondaryColor;
-          }
-          button {
-            height: 39px;
-            width: 39px;
-          }
-          input {
-            -moz-appearance: textfield;
-            width: 50px;
-            text-align: center;
-            border: none;
-            border-left: 1px solid $darkColor;
-            border-right: 1px solid $darkColor;
-          }
-        }
-      }
     }
   }
+}
+
+.price-wrapper {
+  display: flex;
+  justify-content: flex-end;
 }
