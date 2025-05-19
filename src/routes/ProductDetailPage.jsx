@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useLoaderData, useParams } from "react-router-dom"
+import { useLoaderData, useParams } from "react-router-dom"
 import AddToCart from "../components/shop/AddToCart.jsx"
 import AmountInput from "../components/shop/AmountInput.jsx"
 
@@ -22,24 +22,30 @@ export default function ProductDetailPage() {
   }, [currentProductId, loaderData])
 
   return (
-    <main id="product-detail">
-      <div className="detail-wrapper">
-        <div className="detail-content">
-          <h1>{productData.title}</h1>
-          <div className="price-wrapper">
-            <p>{productData.price}</p>
+
+      <main id="product-detail">
+        <div className="detail-wrapper">
+          <div className="detail-image-container">
+            <div className="detail-image-slide">
+              <img src={productData.image} alt="" />
+              <img src={productData.image} alt="" />
+              <img src={productData.image} alt="" />
+            </div>
           </div>
-          <div className="user-input">
-            <AmountInput />
-            <AddToCart />
+          <div className="detail-content">
+            <h1>{productData.title}</h1>
+            <div className="flex-end">
+              <div className="price-wrapper">
+                <p>{productData.price}</p>
+              </div>
+              <div className="user-input">
+                <AmountInput />
+                <AddToCart />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="detail-image-container">
-          <div className="detail-image-slider">
-            <img src={productData.image} alt="" />
-          </div>
-        </div>
-      </div>
-    </main>
+      </main>
+
   )
 }
