@@ -37,7 +37,10 @@ button {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin-top: 0;
 }
 
@@ -88,6 +91,9 @@ nav {
 
   .logo {
     height: 80%;
+    a {
+      height: 100%;
+    }
   }
 
   .icon {

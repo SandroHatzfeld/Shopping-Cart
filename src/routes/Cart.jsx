@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import { ShopContext } from "./Root.jsx"
 import { Form, useLoaderData } from "react-router-dom"
-import LinkButton from '../components/LinkButton.jsx'
 import AddToCart from '../components/shop/AddToCart.jsx'
 
 export default function Cart() {
