@@ -4,3 +4,15 @@ $accentColor: #f06449;
 $darkColor: #2a2a2a;
 $lightColor: #fefefe;
 $navHeight: 80px;
+
+@mixin fontGradeBold {
+	&:hover {
+    font-weight: 600;
+  }
+	@supports (font-variation-settings: 'GRAD' 150) {
+    &:hover {
+      font-weight: 400;
+      font-variation-settings: 'GRAD' 150;
+    }
+  }
+}

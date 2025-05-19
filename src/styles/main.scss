@@ -3,7 +3,7 @@
 
 @font-face {
   font-family:"Roboto";
-  src: url("/assets/fonts/Roboto-VariableFont_wdth,wght.ttf")
+  src: url("/assets/fonts/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf")
     format("truetype");
 }
 @font-face {
@@ -11,6 +11,8 @@
   src: url("/assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf")
     format("truetype");
 }
+
+
 
 :root {
   font-size: 20px;
@@ -73,7 +75,7 @@ nav {
   }
 
   a.active.text-effect, a.text-effect:hover {
-    font-weight: 600;
+    @include v.fontGradeBold;
 
     &::after {
       width: 100%;
@@ -95,7 +97,6 @@ nav {
 
 .link-button {
   padding: 0.4rem 1.25rem;
-  min-width: 185px;
   width: fit-content;
   background-color: v.$accentColor;
   color: v.$lightColor;
@@ -103,9 +104,7 @@ nav {
   font-family: inherit;
   box-sizing: border-box;
 
-  &:hover {
-    font-weight: 600;
-  }
+  @include v.fontGradeBold
 }
 
 main {
