@@ -61,6 +61,7 @@ nav {
     color: inherit;
     display: inline-block;
     position: relative;
+    
 
     &::after {
       content: "";
@@ -87,11 +88,37 @@ nav {
   }
 
   .icon {
-    height: 40px;
+    height: 2rem;
+    width: 2rem;
+
+    a {
+      height: 100%;
+    }
+
+  }
+  .cart {
+    position: relative;
+
+    .item-count {
+      height: 1rem;
+      width: 1rem;
+      right: -25%;
+      bottom: -25%;
+      position: absolute;
+      background-color: v.$lightColor;
+      border: 2px solid v.$primaryColor;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: v.$primaryColor;
+      font-size: 0.75rem;
+    }
   }
 
   img {
     height: 100%;
+    width: auto;
   }
 }
 

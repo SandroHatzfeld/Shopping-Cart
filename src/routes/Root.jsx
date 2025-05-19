@@ -7,8 +7,6 @@ export const ShopContext = createContext()
 
 export default function Root() {
   const [cartItems, setCartItems] = useState([])
-
-  console.log(cartItems);
   
   return (
     <>
