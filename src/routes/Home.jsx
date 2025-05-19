@@ -8,7 +8,7 @@ export default function Home() {
         <ImageSlider />
         <section className="welcome">
           <div className="image-container">
-            <img src="./assets/images/thumbs/team.jpg" />
+            <img src="/assets/images/thumbs/team.jpg" />
           </div>
           <div className='text-content'>
             <h1>Willkommen bei Museqi</h1>
