@@ -20,6 +20,7 @@ export default function UserInput({itemId}) {
 	
 	const handleClick = () =>{
 		setCartItems(cartItems => [...cartItems, {itemId: itemId, amount: itemAmount}])
+		setItemAmount(1)
 	}
   return (
     <div className="user-input">
