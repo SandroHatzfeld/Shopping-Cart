@@ -25,9 +25,9 @@ export default function ProductListing() {
     <div className="listing-wrapper">
       <p className="breadcrumbs">Hier sollen Breadcrumbs stehen</p>
       <div className="listing-content">
-        {productData.map((item) => {
+        {productData.map((item, index) => {
           return (
-            <ProductListItem item={item} />
+            <ProductListItem key={index} item={item} />
           )
         })}
       </div>

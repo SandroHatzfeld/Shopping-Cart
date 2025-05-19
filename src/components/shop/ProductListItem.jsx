@@ -16,7 +16,7 @@ export default function ProductListItem({item}) {
         </Link>
         <div className="flex-bottom">
           <p className="price">{item.price} €</p>
-          <UserInput />
+          <UserInput itemId={item.id}/>
         </div>
       </div>
     </div>

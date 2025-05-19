@@ -3,7 +3,7 @@ import AddToCart from "./AddToCart.jsx"
 import { useContext, useState } from 'react'
 import { ShopContext } from '../../routes/Root.jsx'
 
-export default function UserInput() {
+export default function UserInput({itemId}) {
   const { cartItems, setCartItems } = useContext(ShopContext)
 	const [itemAmount, setItemAmount] = useState(1)
 
@@ -18,6 +18,9 @@ export default function UserInput() {
 		setItemAmount(input)
 	}
 	
+	const handleClick = () =>{
+		setCartItems(cartItems => [...cartItems, {itemId: itemId, amount: itemAmount}])
+	}
   return (
     <div className="user-input">
       <AmountInput
@@ -26,7 +29,7 @@ export default function UserInput() {
         handleAmountUpdate={handleAmountUpdate}
 				itemAmount={itemAmount}
       />
-      <AddToCart />
+      <AddToCart handleClick={handleClick}/>
     </div>
   )
 }

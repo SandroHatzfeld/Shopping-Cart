@@ -1,3 +1,7 @@
-export default function AddToCart() {
-  return <button className="add-to-cart link-button">In den Warenkorb</button>
+export default function AddToCart({ handleClick }) {
+  return (
+    <button className="add-to-cart link-button" onClick={handleClick}>
+      In den Warenkorb
+    </button>
+  )
 }
