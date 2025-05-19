@@ -3,7 +3,7 @@ import { createContext, useState } from "react"
 import Navigation from "../components/Navigation.jsx"
 import Footer from "../components/Footer.jsx"
 
-const ShopContext = createContext()
+export const ShopContext = createContext()
 
 export default function Root() {
   const [cartItems, setCartItems] = useState([])

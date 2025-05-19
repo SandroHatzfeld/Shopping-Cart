@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
-import { Link, useLoaderData, useParams } from "react-router-dom"
-import AmountInput from "../components/shop/AmountInput.jsx"
-import AddToCart from '../components/shop/AddToCart.jsx'
+import { useLoaderData, useParams } from "react-router-dom"
+import ProductListItem from '../components/shop/ProductListItem.jsx'
 
 export default function ProductListing() {
   const loaderData = useLoaderData()
@@ -28,23 +27,7 @@ export default function ProductListing() {
       <div className="listing-content">
         {productData.map((item) => {
           return (
-            <div className="product-item" key={item.id}>
-              <Link to={`/shop/products/${item.id}`} className='product-item-image-link'>
-                <img src={item.image} alt="" />
-              </Link>
-              <div className="product-item-content">
-                <Link to={`/shop/products/${item.id}`}>
-                  <p className="title">{item.title}</p>
-                </Link>
-                <div className="flex-bottom">
-                  <p className="price">{item.price} €</p>
-                  <div className="user-input">
-                    <AmountInput />
-                    <AddToCart />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ProductListItem item={item} />
           )
         })}
       </div>
