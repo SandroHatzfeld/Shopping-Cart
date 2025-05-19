@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useLoaderData, useParams } from "react-router-dom"
 import AddToCart from "../components/shop/AddToCart.jsx"
 import AmountInput from "../components/shop/AmountInput.jsx"
+import UserInput from '../components/shop/UserInput.jsx'
 
 export default function ProductDetailPage() {
   const loaderData = useLoaderData()
@@ -38,10 +39,7 @@ export default function ProductDetailPage() {
               <div className="price-wrapper">
                 <p>{productData.price}</p>
               </div>
-              <div className="user-input">
-                <AmountInput />
-                <AddToCart />
-              </div>
+              <UserInput itemId={productData.id}/>
             </div>
           </div>
         </div>
