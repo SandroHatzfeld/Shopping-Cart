@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react"
 import { useLoaderData, useParams } from "react-router-dom"
-import AddToCart from "../components/shop/AddToCart.jsx"
-import AmountInput from "../components/shop/AmountInput.jsx"
 import UserInput from '../components/shop/UserInput.jsx'
 
 export default function ProductDetailPage() {
