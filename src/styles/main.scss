@@ -4,20 +4,19 @@
 @font-face {
   font-family: Roboto;
   src: url("./assets/fonts/Roboto-VariableFont_wdth,wght.ttf")
-    format("truetype");
-  font-weight: 400;
+    format("truetype-variation");
 }
 @font-face {
   font-family: "Roboto Italic";
   src: url("./assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf")
-    format("truetype");
-  font-weight: 400;
+    format("truetype-variation");
 }
 
 :root {
   font-size: 20px;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: 400;
+  text-rendering: optimizeLegibility;
 }
 
 html,
@@ -59,7 +58,6 @@ nav {
   a {
     color: inherit;
     display: inline-block;
-    // transition: font-weight ease 0.3s;
     position: relative;
 
     &::after {
@@ -74,7 +72,7 @@ nav {
     }
   }
 
-  a.active {
+  a.active.text-effect, a.text-effect:hover {
     font-weight: 600;
 
     &::after {
@@ -97,10 +95,12 @@ nav {
 
 .link-button {
   padding: 0.4rem 1.25rem;
+  min-width: 165px;
   width: fit-content;
   background-color: v.$accentColor;
   color: v.$lightColor;
-  font-family: inherit;
+  font-size: 0.75rem;
+  box-sizing: border-box;
 
   &:hover {
     font-weight: 600;
@@ -118,7 +118,7 @@ main {
 section {
   width: 100%;
   height: 100%;
-  max-height: 530px;
+  max-height: 590px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   background-color: v.$secondaryColor;

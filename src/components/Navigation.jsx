@@ -6,8 +6,8 @@ export default function Navigation() {
     <nav>
       <div>
         <LinkImage image='./assets/icons/logo_white.svg' alt='Museqi Logo' link='/' classes='logo'/>
-        <NavLink to='/'>Startseite</NavLink>
-        <NavLink to='/shop'>Shop</NavLink>
+        <NavLink className="text-effect" to='/'>Startseite</NavLink>
+        <NavLink className="text-effect" to='/shop'>Shop</NavLink>
       </div>
 			<div >
 				<LinkImage image='./assets/icons/profile_white.svg' alt='Zum Profil' link='profile' classes='icon'/>
