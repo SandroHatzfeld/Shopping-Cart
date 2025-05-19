@@ -1,16 +1,18 @@
 import { useContext, useEffect, useState } from "react"
 import { ShopContext } from "./Root.jsx"
-import { useLoaderData } from "react-router-dom"
+import { Form, useLoaderData } from "react-router-dom"
+import LinkButton from '../components/LinkButton.jsx'
+import AddToCart from '../components/shop/AddToCart.jsx'
 
 export default function Cart() {
   const { cartItems, setCartitems } = useContext(ShopContext)
-	const [cartItemData, setCartItemData] = useState([])
+  const [cartItemData, setCartItemData] = useState([])
   const [totalCost, setTotalCost] = useState(0)
   const loaderData = useLoaderData()
   const shippingCost = 4.99
 
   useEffect(() => {
-		const tempCartItemData = []
+    const tempCartItemData = []
     cartItems.forEach((item) => {
       tempCartItemData.push({
         productData: loaderData.find((product) => product.id === item.id),
@@ -18,18 +20,19 @@ export default function Cart() {
       })
     })
 
-		setCartItemData(tempCartItemData)
+    setCartItemData(tempCartItemData)
 
     const tempTotalCost = tempCartItemData.reduce(
       (total, cur) => total + cur.productData.price * cur.productAmount,
       0
     )
     setTotalCost(tempTotalCost)
-  
-		
-	}, [cartItems])
-	
-	
+  }, [cartItems])
+
+	const handleSubmit = () => {
+
+	}
+
   return (
     <main id="cart">
       <section>
@@ -38,7 +41,7 @@ export default function Cart() {
         <div className="cart-item-container">
           {cartItemData.map((item) => {
             return (
-              <div className="cart-item">
+              <div className="cart-item" key={item.productData.id}>
                 <img src={item.productData.image} alt="" />
                 <div className="cart-item-content">
                   <p className="cart-item-title">{item.productData.title}</p>
@@ -50,11 +53,23 @@ export default function Cart() {
         </div>
       </section>
       <aside>
-        <h1>Warenkorb</h1>
-        <p className="sum">{totalCost} €</p>
-        <p className="shipping">{shippingCost} €</p>
-        <hr />
-        <p className="total-sum">{totalCost + shippingCost} €</p>
+        <Form>
+          <h1>Warenkorb</h1>
+          <div className="space-items">
+            <span>Gesamtwarenwert</span>
+            <span className="sum">{totalCost} €</span>
+          </div>
+          <div className="space-items">
+            <span>Versandkosten</span>
+            <span className="shipping">{shippingCost} €</span>
+          </div>
+          <hr />
+          <div className="space-items">
+            <span>Gesamteinkaufswert</span>
+            <span className="total-sum">{totalCost + shippingCost} €</span>
+          </div>
+					<AddToCart handleClick={handleSubmit} buttonText='Jetzt bestellen' />
+        </Form>
       </aside>
     </main>
   )

@@ -23,7 +23,7 @@ aside {
     a {
       color: v.$darkColor;
       text-decoration: none;
-      
+
       @include v.fontGradeBold;
     }
 
@@ -62,8 +62,6 @@ aside {
     button {
       height: 39px;
       width: 39px;
-
-      
     }
     input {
       -moz-appearance: textfield;
@@ -77,8 +75,6 @@ aside {
         -webkit-appearance: none;
         margin: 0;
       }
-
-      
     }
   }
 }
@@ -138,7 +134,6 @@ aside {
       background-color: white;
     }
 
-
     .flex-end {
       display: flex;
       flex-direction: column;
@@ -170,14 +165,14 @@ aside {
   }
 }
 
-
 #cart {
   padding: 2rem;
   grid-template-columns: 2fr 1fr;
   background-color: v.$secondaryColor;
   gap: 1rem;
 
-  section, aside {
+  section,
+  aside {
     max-height: none;
     padding: 1rem;
     background-color: v.$lightColor;
@@ -188,14 +183,46 @@ aside {
   hr {
     width: 100%;
   }
-  
+
   section {
     display: flex;
     flex-direction: column;
+    
+    .cart-item-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .cart-item {
+      padding: 0.5rem;
+      display: flex;      
+      height: 200px;
+      gap: 1rem;
+      border: 1px solid v.$primaryColor;
+
+      img {
+        height: 100%;
+        width: 25%;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
   }
 
   aside {
-    
-
+    .space-items {
+      display: flex;
+      justify-content: space-between;
+    }
+    p {
+      margin: 0;
+    }
+    .link-button {
+      margin-top: 0.5rem;
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
   }
 }
