@@ -1,4 +1,5 @@
 @use "sass:color";
+@use 'variables' as v;
 
 @font-face {
   font-family: Roboto;
@@ -12,13 +13,6 @@
     format("truetype");
   font-weight: 400;
 }
-
-$primaryColor: #2e3a43;
-$secondaryColor: #f0eac6;
-$accentColor: #f06449;
-$darkColor: #2a2a2a;
-$lightColor: #fefefe;
-$navHeight: 80px;
 
 :root {
   font-size: 20px;
@@ -42,17 +36,17 @@ button {
 
 #root {
   display: grid;
-  grid-template-rows: auto $navHeight;
+  grid-template-rows: auto v.$navHeight;
   min-height: 100vh;
 }
 
 nav {
   width: 100%;
-  height: $navHeight;
+  height: v.$navHeight;
   padding: 0 2rem;
   box-sizing: border-box;
-  background-color: $primaryColor;
-  color: $lightColor;
+  background-color: v.$primaryColor;
+  color: v.$lightColor;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -78,7 +72,7 @@ nav {
       position: absolute;
       bottom: 0;
       left: 0;
-      background-color: $lightColor;
+      background-color: v.$lightColor;
       transition: width ease 0.3s;
     }
   }
@@ -107,8 +101,8 @@ nav {
 .link-button {
   padding: 0.4rem 1.25rem;
   width: fit-content;
-  background-color: $accentColor;
-  color: $lightColor;
+  background-color: v.$accentColor;
+  color: v.$lightColor;
   font-family: inherit;
 
   &:hover {
@@ -116,8 +110,8 @@ nav {
   }
 }
 main {
-  margin-top: $navHeight;
-  min-height: calc(100vh - $navHeight);
+  margin-top: v.$navHeight;
+  min-height: calc(100vh - v.$navHeight);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
 }
@@ -128,7 +122,7 @@ section {
   max-height: 640px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  background-color: $secondaryColor;
+  background-color: v.$secondaryColor;
 }
 
 .text-content {
@@ -181,10 +175,10 @@ section {
     padding-block: 0;
     border: none;
     border-radius: 100%;
-    background-color: $lightColor;
+    background-color: v.$lightColor;
 
     &.active {
-      background-color: $accentColor;
+      background-color: v.$accentColor;
     }
   }
 }
@@ -203,7 +197,7 @@ section {
     width: 1.33rem;
     border: none;
     border-radius: 0;
-    background-color: color.adjust($lightColor, $alpha: 0.7);
+    background-color: color.adjust(v.$lightColor, $alpha: 0.7);
   }
 }
 
@@ -229,8 +223,8 @@ section {
 
 footer {
   width: 100%;
-  background-color: $primaryColor;
-  color: $lightColor;
+  background-color: v.$primaryColor;
+  color: v.$lightColor;
   display: flex;
   justify-content: center;
   align-items: center;
