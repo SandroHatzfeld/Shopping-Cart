@@ -5,7 +5,7 @@ import ErrorPage from "./ErrorPage.jsx"
 import Root from "./Root.jsx"
 import ProductListing from "./ProductListing.jsx"
 import ProductDetailPage from "./ProductDetailPage.jsx"
-import ListLayout from './ListLayout.jsx'
+import ListLayout from "./ListLayout.jsx"
 
 const categoryLoader = async () => {
   return fetch("https://fakestoreapi.com/products/categories").then((res) =>
@@ -51,7 +51,7 @@ const routes = [
         ],
       },
       { path: "profile", element: <ErrorPage /> },
-      { path: "cart", element: <Cart /> },
+      { path: "cart", element: <Cart />, loader: productLoader },
     ],
   },
 ]

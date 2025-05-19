@@ -14,7 +14,7 @@ export default function LinkImage({
       <Link to={link} >
         <img src={image} alt={alt} />
       </Link>
-      {itemCount && <div className='item-count'><span>{itemCount > 9 ? '9+': itemCount}</span></div>}
+      {itemCount !== null && <div className='item-count'><span>{itemCount > 9 ? '9+': itemCount}</span></div>}
     </div>
   )
 }
