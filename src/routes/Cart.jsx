@@ -5,6 +5,7 @@ import { useImmer } from "use-immer"
 
 import AddToCart from "../components/shop/AddToCart.jsx"
 import AmountInput from "../components/shop/AmountInput.jsx"
+import priceRendering from '../utils/priceRendering.jsx'
 
 export default function Cart() {
   const { cartItems, setCartitems } = useContext(ShopContext)
@@ -48,6 +49,7 @@ export default function Cart() {
       item.productAmount -= 1
     })
   })
+
   const handleAmountUpdate = useCallback((id, amount) => {
     console.log(amount);
     
@@ -72,7 +74,7 @@ export default function Cart() {
                 <div className="cart-item-content">
                   <p className="cart-item-title">{item.productData.title}</p>
                   <div className="cart-item-price">
-                    <span>{item.productData.price} €</span>
+                    <span>{priceRendering(item.productData.price)}</span>
                     <span>
                       <AmountInput
                         itemAmount={item.productAmount}
@@ -81,7 +83,7 @@ export default function Cart() {
                         handleAmountUpdate={(amount) => handleAmountUpdate(item.productData.id, amount)}
                       />
                     </span>
-                    <span>{item.productData.price * item.productAmount} €</span>
+                    <span>{priceRendering(item.productData.price * item.productAmount)}</span>
                   </div>
                 </div>
               </div>
@@ -94,16 +96,16 @@ export default function Cart() {
           <h1>Warenkorb</h1>
           <div className="space-items">
             <span>Gesamtwarenwert</span>
-            <span className="sum">{totalCost} €</span>
+            <span className="sum">{priceRendering(totalCost)}</span>
           </div>
           <div className="space-items">
             <span>Versandkosten</span>
-            <span className="shipping">{shippingCost} €</span>
+            <span className="shipping">{priceRendering(shippingCost)}</span>
           </div>
           <hr />
           <div className="space-items">
             <span>Gesamteinkaufswert</span>
-            <span className="total-sum">{totalCost + shippingCost} €</span>
+            <span className="total-sum">{priceRendering(totalCost + shippingCost)}</span>
           </div>
           <AddToCart handleClick={handleSubmit} buttonText="Jetzt bestellen" />
         </Form>

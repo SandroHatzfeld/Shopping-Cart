@@ -1,3 +1,4 @@
+import priceRendering from '../../utils/priceRendering.jsx'
 import UserInput from './UserInput.jsx'
 import { Link } from 'react-router-dom'
 
@@ -15,7 +16,7 @@ export default function ProductListItem({item}) {
           <p className="title">{item.title}</p>
         </Link>
         <div className="flex-bottom">
-          <p className="price">{item.price} €</p>
+          <p className="price">{priceRendering(item.price)}</p>
           <UserInput itemId={item.id}/>
         </div>
       </div>
