@@ -1,7 +1,6 @@
 import { useCallback, useContext, useEffect, useState } from "react"
 import { ShopContext } from "./Root.jsx"
 import { Form, useLoaderData } from "react-router-dom"
-import { produce } from "immer"
 import { useImmer } from "use-immer"
 
 import AddToCart from "../components/shop/AddToCart.jsx"
@@ -49,6 +48,15 @@ export default function Cart() {
       item.productAmount -= 1
     })
   })
+  const handleAmountUpdate = useCallback((id, amount) => {
+    console.log(amount);
+    
+    setCartItemData((draft) => {
+      const item = draft.find(cartItem => cartItem.productData.id === id)
+      
+      item.productAmount = Number.parseInt(amount)
+    })
+  })
 
   
   return (
@@ -70,6 +78,7 @@ export default function Cart() {
                         itemAmount={item.productAmount}
                         handleAmountIncrease={() => handleAmountIncrease(item.productData.id)}
                         handleAmountDecrease={() => handleAmountDecrease(item.productData.id)}
+                        handleAmountUpdate={(amount) => handleAmountUpdate(item.productData.id, amount)}
                       />
                     </span>
                     <span>{item.productData.price * item.productAmount} €</span>
