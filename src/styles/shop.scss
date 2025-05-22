@@ -14,14 +14,14 @@ aside {
 
   .category-item {
     padding: 0.5rem 0;
-    border-top: 1px solid v.$darkColor;
+    border-top: 1px solid v.$primaryColor;
     display: flex;
     justify-content: space-between;
     &:last-child {
-      border-bottom: 1px solid v.$darkColor;
+      border-bottom: 1px solid v.$primaryColor;
     }
     a {
-      color: v.$darkColor;
+      color: v.$primaryColor;
       text-decoration: none;
 
       @include v.fontGradeBold;
@@ -51,30 +51,30 @@ aside {
   display: flex;
   gap: 0.25rem;
 
-  .amount-wrapper {
-    height: 100%;
-    display: flex;
+}
+.amount-wrapper {
+  height: 100%;
+  display: flex;
 
-    input,
-    button {
-      background-color: v.$secondaryColor;
-    }
-    button {
-      height: 39px;
-      width: 39px;
-    }
-    input {
-      -moz-appearance: textfield;
-      width: 50px;
-      text-align: center;
-      border: none;
-      border-left: 1px solid v.$darkColor;
-      border-right: 1px solid v.$darkColor;
-      &::-webkit-outer-spin-button,
-      &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
+  input,
+  button {
+    background-color: v.$secondaryColor;
+  }
+  button {
+    height: 39px;
+    width: 39px;
+  }
+  input {
+    -moz-appearance: textfield;
+    width: 50px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid v.$primaryColor;
+    border-right: 1px solid v.$primaryColor;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
   }
 }
@@ -84,7 +84,7 @@ aside {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0.75rem;
-  border: 1px solid v.$darkColor;
+  border: 1px solid v.$primaryColor;
 
   .product-item-image-link {
     overflow: hidden;
@@ -104,7 +104,7 @@ aside {
 
     p {
       margin: 0;
-      color: v.$darkColor;
+      color: v.$primaryColor;
     }
 
     .flex-bottom {
@@ -206,6 +206,24 @@ aside {
         width: 25%;
         object-fit: contain;
         object-position: center;
+      }
+
+      .cart-item-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .cart-item-title {
+        font-weight: bold;
+      }
+      .cart-item-price {
+        align-self: flex-end;
+        justify-self: flex-end;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem
       }
     }
   }

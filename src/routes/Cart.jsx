@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react"
 import { ShopContext } from "./Root.jsx"
 import { Form, useLoaderData } from "react-router-dom"
-import AddToCart from '../components/shop/AddToCart.jsx'
+import AddToCart from "../components/shop/AddToCart.jsx"
+import AmountInput from '../components/shop/AmountInput.jsx'
 
 export default function Cart() {
   const { cartItems, setCartitems } = useContext(ShopContext)
@@ -28,9 +29,7 @@ export default function Cart() {
     setTotalCost(tempTotalCost)
   }, [cartItems])
 
-	const handleSubmit = () => {
-
-	}
+  const handleSubmit = () => {}
 
   return (
     <main id="cart">
@@ -44,7 +43,11 @@ export default function Cart() {
                 <img src={item.productData.image} alt="" />
                 <div className="cart-item-content">
                   <p className="cart-item-title">{item.productData.title}</p>
-                  <p className="cart-item-price">{item.productData.price}</p>
+                  <div className='cart-item-price'>
+                    <span>{item.productData.price} €</span>
+                    <span><AmountInput itemAmount={item.productAmount} /></span>
+                    <span>{item.productData.price * item.productAmount} €</span>
+                  </div>
                 </div>
               </div>
             )
@@ -67,7 +70,7 @@ export default function Cart() {
             <span>Gesamteinkaufswert</span>
             <span className="total-sum">{totalCost + shippingCost} €</span>
           </div>
-					<AddToCart handleClick={handleSubmit} buttonText='Jetzt bestellen' />
+          <AddToCart handleClick={handleSubmit} buttonText="Jetzt bestellen" />
         </Form>
       </aside>
     </main>
