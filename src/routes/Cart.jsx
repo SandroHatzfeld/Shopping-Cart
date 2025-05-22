@@ -1,12 +1,15 @@
-import { useContext, useEffect, useState } from "react"
+import { useCallback, useContext, useEffect, useState } from "react"
 import { ShopContext } from "./Root.jsx"
 import { Form, useLoaderData } from "react-router-dom"
+import { produce } from "immer"
+import { useImmer } from "use-immer"
+
 import AddToCart from "../components/shop/AddToCart.jsx"
-import AmountInput from '../components/shop/AmountInput.jsx'
+import AmountInput from "../components/shop/AmountInput.jsx"
 
 export default function Cart() {
   const { cartItems, setCartitems } = useContext(ShopContext)
-  const [cartItemData, setCartItemData] = useState([])
+  const [cartItemData, setCartItemData] = useImmer([])
   const [totalCost, setTotalCost] = useState(0)
   const loaderData = useLoaderData()
   const shippingCost = 4.99
@@ -31,21 +34,44 @@ export default function Cart() {
 
   const handleSubmit = () => {}
 
+  const handleAmountIncrease = useCallback((id) => {
+    setCartItemData((draft) => {
+      const item = draft.find(cartItem => cartItem.productData.id === id)
+      item.productAmount += 1
+    })
+  })
+
+  const handleAmountDecrease = useCallback((id) => {
+    setCartItemData((draft) => {
+      const item = draft.find(cartItem => cartItem.productData.id === id)
+      
+      if(item.productAmount === 1) return
+      item.productAmount -= 1
+    })
+  })
+
+  
   return (
     <main id="cart">
       <section>
         <h2>Ihre gewählten Produkte</h2>
         <hr />
         <div className="cart-item-container">
-          {cartItemData.map((item) => {
+          {cartItemData.map((item ) => {
             return (
               <div className="cart-item" key={item.productData.id}>
                 <img src={item.productData.image} alt="" />
                 <div className="cart-item-content">
                   <p className="cart-item-title">{item.productData.title}</p>
-                  <div className='cart-item-price'>
+                  <div className="cart-item-price">
                     <span>{item.productData.price} €</span>
-                    <span><AmountInput itemAmount={item.productAmount} /></span>
+                    <span>
+                      <AmountInput
+                        itemAmount={item.productAmount}
+                        handleAmountIncrease={() => handleAmountIncrease(item.productData.id)}
+                        handleAmountDecrease={() => handleAmountDecrease(item.productData.id)}
+                      />
+                    </span>
                     <span>{item.productData.price * item.productAmount} €</span>
                   </div>
                 </div>
