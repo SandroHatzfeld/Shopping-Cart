@@ -6,13 +6,13 @@ import { useImmer } from "use-immer"
 import AddToCart from "../components/shop/AddToCart.jsx"
 import AmountInput from "../components/shop/AmountInput.jsx"
 import priceRendering from '../utils/priceRendering.jsx'
+import { shippingCost } from '../data/shippingCost.js'
 
 export default function Cart() {
   const { cartItems, setCartitems } = useContext(ShopContext)
   const [cartItemData, setCartItemData] = useImmer([])
   const [totalCost, setTotalCost] = useState(0)
   const loaderData = useLoaderData()
-  const shippingCost = 4.99
 
   useEffect(() => {
     const tempCartItemData = []
@@ -24,13 +24,15 @@ export default function Cart() {
     })
 
     setCartItemData(tempCartItemData)
+  }, [cartItems])
 
-    const tempTotalCost = tempCartItemData.reduce(
+  useEffect(() => {
+    const tempTotalCost = cartItemData.reduce(
       (total, cur) => total + cur.productData.price * cur.productAmount,
       0
     )
     setTotalCost(tempTotalCost)
-  }, [cartItems])
+  },[cartItemData])
 
   const handleSubmit = () => {}
 
@@ -50,9 +52,7 @@ export default function Cart() {
     })
   })
 
-  const handleAmountUpdate = useCallback((id, amount) => {
-    console.log(amount);
-    
+  const handleAmountUpdate = useCallback((id, amount) => {    
     setCartItemData((draft) => {
       const item = draft.find(cartItem => cartItem.productData.id === id)
       
