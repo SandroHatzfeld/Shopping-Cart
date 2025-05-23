@@ -39,15 +39,22 @@ export default function Cart() {
   const handleAmountIncrease = useCallback((id) => {
     setCartItemData((draft) => {
       const item = draft.find(cartItem => cartItem.productData.id === id)
+
       item.productAmount += 1
     })
   })
-
+  
   const handleAmountDecrease = useCallback((id) => {
     setCartItemData((draft) => {
       const item = draft.find(cartItem => cartItem.productData.id === id)
       
-      if(item.productAmount === 1) return
+      // test if the field is empty and reset to 1
+      if(item.productAmount === '') {
+        item.productAmount = 1
+      }
+
+      if(item.productAmount <= 1) return
+
       item.productAmount -= 1
     })
   })
