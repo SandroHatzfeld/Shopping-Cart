@@ -9,7 +9,7 @@ import priceRendering from "../utils/priceRendering.jsx"
 import { shippingCost } from "../data/shippingCost.js"
 
 export default function Cart() {
-  const { cartItems, setCartitems } = useContext(ShopContext)
+  const { cartItems, setCartItems } = useContext(ShopContext)
   const [cartItemData, setCartItemData] = useImmer([])
   const [totalCost, setTotalCost] = useState(0)
   const loaderData = useLoaderData()
@@ -37,39 +37,39 @@ export default function Cart() {
   const handleSubmit = () => {}
 
   const handleAmountIncrease = useCallback((id) => {
-    setCartItemData((draft) => {
-      const item = draft.find((cartItem) => cartItem.productData.id === id)
+    setCartItems((draft) => {
+      const item = draft.find((cartItem) => cartItem.id === id)
 
-      item.productAmount += 1
+      item.amount += 1
     })
   })
 
   const handleAmountDecrease = useCallback((id) => {
-    setCartItemData((draft) => {
-      const item = draft.find((cartItem) => cartItem.productData.id === id)
+    setCartItems((draft) => {
+      const item = draft.find((cartItem) => cartItem.id === id)
 
       // test if the field is empty and reset to 1
-      if (item.productAmount === "") {
-        item.productAmount = 1
+      if (item.amount === "") {
+        item.amount = 1
       }
 
-      if (item.productAmount <= 1) return
+      if (item.amount <= 1) return
 
-      item.productAmount -= 1
+      item.amount -= 1
     })
   })
 
   const handleAmountUpdate = useCallback((id, amount) => {
-    setCartItemData((draft) => {
-      const item = draft.find((cartItem) => cartItem.productData.id === id)
+    setCartItems((draft) => {
+      const item = draft.find((cartItem) => cartItem.id === id)
 
-      item.productAmount = amount
+      item.amount = amount
     })
   })
 
   const handleRemoveItem = useCallback((id) => {
-    setCartItemData((draft) => {
-      const itemIndex = draft.findIndex((cartItem) => cartItem.productData.id === id)
+    setCartItems((draft) => {
+      const itemIndex = draft.findIndex((cartItem) => cartItem.id === id)
       
       draft.splice(itemIndex, 1)
     })
