@@ -52,11 +52,11 @@ export default function Cart() {
     })
   })
 
-  const handleAmountUpdate = useCallback((id, amount) => {    
+  const handleAmountUpdate = useCallback((id, amount) => {
     setCartItemData((draft) => {
       const item = draft.find(cartItem => cartItem.productData.id === id)
       
-      item.productAmount = Number.parseInt(amount)
+      item.productAmount = amount
     })
   })
 
@@ -83,7 +83,7 @@ export default function Cart() {
                         handleAmountUpdate={(amount) => handleAmountUpdate(item.productData.id, amount)}
                       />
                     </span>
-                    <span>{priceRendering(item.productData.price * item.productAmount)}</span>
+                    <span>{item.productAmount === '' ? priceRendering(item.productData.price) : priceRendering(item.productData.price * item.productAmount)}</span>
                   </div>
                 </div>
               </div>
