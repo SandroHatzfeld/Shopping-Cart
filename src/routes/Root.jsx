@@ -2,11 +2,12 @@ import { Outlet } from "react-router-dom"
 import { createContext, useState } from "react"
 import Navigation from "../components/Navigation.jsx"
 import Footer from "../components/Footer.jsx"
+import { useImmer } from 'use-immer'
 
 export const ShopContext = createContext()
 
 export default function Root() {
-  const [cartItems, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useImmer([])
   
   return (
     <>
