@@ -68,11 +68,11 @@ export default function Cart() {
   })
 
   const handleRemoveItem = useCallback((id) => {
-    // setCartItemData((draft) => {
-    //   const itemIndex = draft.findIndex((cartItem) => cartItem.productData.id === id)
-
-    //   draft.splice(itemIndex, 1)
-    // })
+    setCartItemData((draft) => {
+      const itemIndex = draft.findIndex((cartItem) => cartItem.productData.id === id)
+      
+      draft.splice(itemIndex, 1)
+    })
   })
 
   return (
@@ -88,7 +88,7 @@ export default function Cart() {
                 <div className="cart-item-content">
                   <div className="cart-item-title-container">
                     <p className="cart-item-title">{item.productData.title}</p>
-                     <button onClick={handleRemoveItem(item.productData.id)} className='cart-item-remove'></button>
+                     <button onClick={() =>handleRemoveItem(item.productData.id)} className='cart-item-remove'></button>
                   </div>
                   <div className="cart-item-price">
                     <span>{priceRendering(item.productData.price)}</span>
