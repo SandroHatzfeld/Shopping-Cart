@@ -1,19 +1,19 @@
 import { useCallback, useContext, useEffect, useState } from "react"
 import { ShopContext } from "./Root.jsx"
 import { Form, useLoaderData } from "react-router-dom"
-import { useImmer } from "use-immer"
 
 import AddToCart from "../components/shop/AddToCart.jsx"
 import AmountInput from "../components/shop/AmountInput.jsx"
 import priceRendering from "../utils/priceRendering.jsx"
-import { shippingCost } from "../data/shippingCost.js"
+import { freeShipping, shippingCost } from "../data/shippingCost.js"
 
 export default function Cart() {
   const { cartItems, setCartItems } = useContext(ShopContext)
-  const [cartItemData, setCartItemData] = useImmer([])
+  const [cartItemData, setCartItemData] = useState([])
   const [totalCost, setTotalCost] = useState(0)
+  const [totalSum, setTotalSum] = useState(0)
   const loaderData = useLoaderData()
-
+  
   useEffect(() => {
     const tempCartItemData = []
     cartItems.forEach((item) => {
@@ -32,6 +32,12 @@ export default function Cart() {
       0
     )
     setTotalCost(tempTotalCost)
+
+    if(tempTotalCost > freeShipping) {
+      setTotalSum(tempTotalCost)
+    } else {
+      setTotalSum(tempTotalCost + shippingCost)
+    }
   }, [cartItemData])
 
   const handleSubmit = () => {}
@@ -70,7 +76,7 @@ export default function Cart() {
   const handleRemoveItem = useCallback((id) => {
     setCartItems((draft) => {
       const itemIndex = draft.findIndex((cartItem) => cartItem.id === id)
-      
+
       draft.splice(itemIndex, 1)
     })
   })
@@ -88,7 +94,10 @@ export default function Cart() {
                 <div className="cart-item-content">
                   <div className="cart-item-title-container">
                     <p className="cart-item-title">{item.productData.title}</p>
-                     <button onClick={() =>handleRemoveItem(item.productData.id)} className='cart-item-remove'></button>
+                    <button
+                      onClick={() => handleRemoveItem(item.productData.id)}
+                      className="cart-item-remove"
+                    ></button>
                   </div>
                   <div className="cart-item-price">
                     <span>{priceRendering(item.productData.price)}</span>
@@ -129,13 +138,19 @@ export default function Cart() {
           </div>
           <div className="space-items">
             <span>Versandkosten</span>
-            <span className="shipping">{priceRendering(shippingCost)}</span>
+            {totalCost > freeShipping ? (
+              <span className="shipping">
+                <span className='free-shipping'>{priceRendering(shippingCost)}</span> {priceRendering(0)}
+              </span>
+            ) : (
+              <span className="shipping">{priceRendering(shippingCost)}</span>
+            )}
           </div>
           <hr />
           <div className="space-items">
             <span>Gesamteinkaufswert</span>
             <span className="total-sum">
-              {priceRendering(totalCost + shippingCost)}
+              {priceRendering(totalSum)}
             </span>
           </div>
           <AddToCart handleClick={handleSubmit} buttonText="Jetzt bestellen" />

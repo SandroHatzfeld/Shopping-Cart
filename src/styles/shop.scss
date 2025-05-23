@@ -249,6 +249,11 @@ aside {
     p {
       margin: 0;
     }
+    .free-shipping {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.75rem;
+    }
     .link-button {
       margin-top: 0.5rem;
       display: block;
