@@ -2,6 +2,7 @@ import { useCallback, useContext, useEffect, useState } from "react"
 import { ShopContext } from "./Root.jsx"
 import { Form, useLoaderData } from "react-router-dom"
 
+import LinkButton from '../components/LinkButton.jsx'
 import AddToCart from "../components/shop/AddToCart.jsx"
 import AmountInput from "../components/shop/AmountInput.jsx"
 import priceRendering from "../utils/priceRendering.jsx"
@@ -12,8 +13,10 @@ export default function Cart() {
   const [cartItemData, setCartItemData] = useState([])
   const [totalCost, setTotalCost] = useState(0)
   const [totalSum, setTotalSum] = useState(0)
+  const [purchaseDone, setPurchaseDone] = useState(false)
+
   const loaderData = useLoaderData()
-  
+
   useEffect(() => {
     const tempCartItemData = []
     cartItems.forEach((item) => {
@@ -33,14 +36,17 @@ export default function Cart() {
     )
     setTotalCost(tempTotalCost)
 
-    if(tempTotalCost > freeShipping) {
+    if (tempTotalCost > freeShipping) {
       setTotalSum(tempTotalCost)
     } else {
       setTotalSum(tempTotalCost + shippingCost)
     }
   }, [cartItemData])
 
-  const handleSubmit = () => {}
+  const handleSubmit = () => {
+    setPurchaseDone(true)
+    setCartItems([])
+  }
 
   const handleAmountIncrease = useCallback((id) => {
     setCartItems((draft) => {
@@ -72,6 +78,7 @@ export default function Cart() {
       item.amount = amount
     })
   })
+  console.log(cartItems)
 
   const handleRemoveItem = useCallback((id) => {
     setCartItems((draft) => {
@@ -84,78 +91,101 @@ export default function Cart() {
   return (
     <main id="cart">
       <section>
-        <h2>Ihre gewählten Produkte</h2>
-        <hr />
-        <div className="cart-item-container">
-          {cartItemData.map((item) => {
-            return (
-              <div className="cart-item" key={item.productData.id}>
-                <img src={item.productData.image} alt="" />
-                <div className="cart-item-content">
-                  <div className="cart-item-title-container">
-                    <p className="cart-item-title">{item.productData.title}</p>
-                    <button
-                      onClick={() => handleRemoveItem(item.productData.id)}
-                      className="cart-item-remove"
-                    ></button>
-                  </div>
-                  <div className="cart-item-price">
-                    <span>{priceRendering(item.productData.price)}</span>
-                    <span>
-                      <AmountInput
-                        itemAmount={item.productAmount}
-                        handleAmountIncrease={() =>
-                          handleAmountIncrease(item.productData.id)
-                        }
-                        handleAmountDecrease={() =>
-                          handleAmountDecrease(item.productData.id)
-                        }
-                        handleAmountUpdate={(amount) =>
-                          handleAmountUpdate(item.productData.id, amount)
-                        }
-                      />
-                    </span>
-                    <span>
-                      {item.productAmount === ""
-                        ? priceRendering(item.productData.price)
-                        : priceRendering(
-                            item.productData.price * item.productAmount
-                          )}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </section>
-      <aside>
-        <Form>
-          <h1>Warenkorb</h1>
-          <div className="space-items">
-            <span>Gesamtwarenwert</span>
-            <span className="sum">{priceRendering(totalCost)}</span>
-          </div>
-          <div className="space-items">
-            <span>Versandkosten</span>
-            {totalCost > freeShipping ? (
-              <span className="shipping">
-                <span className='free-shipping'>{priceRendering(shippingCost)}</span> {priceRendering(0)}
-              </span>
-            ) : (
-              <span className="shipping">{priceRendering(shippingCost)}</span>
-            )}
-          </div>
+        {cartItems.length == 0 ? (
+          <>
+          <h2>Ihr Warenkorb ist leider leer</h2>
           <hr />
-          <div className="space-items">
-            <span>Gesamteinkaufswert</span>
-            <span className="total-sum">
-              {priceRendering(totalSum)}
-            </span>
-          </div>
-          <AddToCart handleClick={handleSubmit} buttonText="Jetzt bestellen" />
-        </Form>
-      </aside>
+          <p>Entdecken Sie jetzt unsere große Produktauswahl!</p>
+          <LinkButton link='/shop/' text='Jetzt durchstöbern'/>
+          </>
+        ) : purchaseDone ? (
+          <h2>Danke für Ihren Einkauf!</h2>
+        ) : (
+          <>
+            <h2>Ihre gewählten Produkte</h2>
+            <hr />
+            <div className="cart-item-container">
+              {cartItemData.map((item) => {
+                return (
+                  <div className="cart-item" key={item.productData.id}>
+                    <img src={item.productData.image} alt="" />
+                    <div className="cart-item-content">
+                      <div className="cart-item-title-container">
+                        <p className="cart-item-title">
+                          {item.productData.title}
+                        </p>
+                        <button
+                          onClick={() => handleRemoveItem(item.productData.id)}
+                          className="cart-item-remove"
+                        ></button>
+                      </div>
+                      <div className="cart-item-price">
+                        <span>{priceRendering(item.productData.price)}</span>
+                        <span>
+                          <AmountInput
+                            itemAmount={item.productAmount}
+                            handleAmountIncrease={() =>
+                              handleAmountIncrease(item.productData.id)
+                            }
+                            handleAmountDecrease={() =>
+                              handleAmountDecrease(item.productData.id)
+                            }
+                            handleAmountUpdate={(amount) =>
+                              handleAmountUpdate(item.productData.id, amount)
+                            }
+                          />
+                        </span>
+                        <span>
+                          {item.productAmount === ""
+                            ? priceRendering(item.productData.price)
+                            : priceRendering(
+                                item.productData.price * item.productAmount
+                              )}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </>
+        )}
+      </section>
+      {cartItems.length == 0 ? (
+        <></>
+      ) : (
+        <aside>
+          <Form>
+            <h1>Warenkorb</h1>
+            <div className="space-items">
+              <span>Gesamtwarenwert</span>
+              <span className="sum">{priceRendering(totalCost)}</span>
+            </div>
+            <div className="space-items">
+              <span>Versandkosten</span>
+              {totalCost > freeShipping ? (
+                <span className="shipping">
+                  <span className="free-shipping">
+                    {priceRendering(shippingCost)}
+                  </span>{" "}
+                  {priceRendering(0)}
+                </span>
+              ) : (
+                <span className="shipping">{priceRendering(shippingCost)}</span>
+              )}
+            </div>
+            <hr />
+            <div className="space-items">
+              <span>Gesamteinkaufswert</span>
+              <span className="total-sum">{priceRendering(totalSum)}</span>
+            </div>
+            <AddToCart
+              handleClick={handleSubmit}
+              buttonText="Jetzt bestellen"
+            />
+          </Form>
+        </aside>
+      )}
     </main>
   )
 }
