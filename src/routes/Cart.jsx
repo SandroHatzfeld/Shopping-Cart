@@ -2,7 +2,7 @@ import { useCallback, useContext, useEffect, useState } from "react"
 import { ShopContext } from "./Root.jsx"
 import { Form, useLoaderData } from "react-router-dom"
 
-import LinkButton from '../components/LinkButton.jsx'
+import LinkButton from "../components/LinkButton.jsx"
 import AddToCart from "../components/shop/AddToCart.jsx"
 import AmountInput from "../components/shop/AmountInput.jsx"
 import priceRendering from "../utils/priceRendering.jsx"
@@ -91,15 +91,20 @@ export default function Cart() {
   return (
     <main id="cart">
       <section>
-        {cartItems.length == 0 ? (
+        {cartItems.length == 0 && purchaseDone == false ? (
           <>
-          <h2>Ihr Warenkorb ist leider leer</h2>
-          <hr />
-          <p>Entdecken Sie jetzt unsere große Produktauswahl!</p>
-          <LinkButton link='/shop/' text='Jetzt durchstöbern'/>
+            <h2>Ihr Warenkorb ist leider leer</h2>
+            <hr />
+            <p>Entdecken Sie jetzt unsere große Produktauswahl!</p>
+            <LinkButton link="/shop/" text="Jetzt durchstöbern" />
           </>
         ) : purchaseDone ? (
-          <h2>Danke für Ihren Einkauf!</h2>
+          <>
+            <h2>Danke für Ihren Einkauf!</h2>
+            <hr />
+            <p>Kennen Sie schon unsere Neuheiten?</p>
+            <LinkButton link="/shop/electronics" text="Jetzt entdecken" />
+          </>
         ) : (
           <>
             <h2>Ihre gewählten Produkte</h2>
