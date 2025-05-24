@@ -17,7 +17,7 @@ export default function AmountInput({ itemAmount, setItemAmount }) {
   }
 
   const checkAmountUpdate = (input) => {
-    checkValidity(input)
+    checkValidity(parseInt(input))
   }
 
   const checkValidity = (value) => {

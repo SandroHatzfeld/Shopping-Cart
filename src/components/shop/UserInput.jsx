@@ -7,10 +7,6 @@ export default function UserInput({ itemId }) {
   const { cartItems, setCartItems } = useContext(ShopContext)
   const [itemAmount, setItemAmount] = useState(1)
 
-
-  
-
-
   const handleClick = () => {
     const findItem = cartItems.find((item) => item.id === itemId)
 

@@ -48,33 +48,12 @@ export default function Cart() {
     setCartItems([])
   }
 
-  const handleAmountIncrease = useCallback((id) => {
+  const handleSetItemAmount = useCallback((id, amount) => {
     setCartItems((draft) => {
       const item = draft.find((cartItem) => cartItem.id === id)
 
-      item.amount += 1
-    })
-  })
-
-  const handleAmountDecrease = useCallback((id) => {
-    setCartItems((draft) => {
-      const item = draft.find((cartItem) => cartItem.id === id)
-
-      // test if the field is empty and reset to 1
-      if (item.amount === "") {
-        item.amount = 1
-      }
-
-      if (item.amount <= 1) return
-
-      item.amount -= 1
-    })
-  })
-
-  const handleAmountUpdate = useCallback((id, amount) => {
-    setCartItems((draft) => {
-      const item = draft.find((cartItem) => cartItem.id === id)
-
+      console.log(amount);
+      
       item.amount = amount
     })
   })
@@ -128,14 +107,8 @@ export default function Cart() {
                         <span>
                           <AmountInput
                             itemAmount={item.productAmount}
-                            handleAmountIncrease={() =>
-                              handleAmountIncrease(item.productData.id)
-                            }
-                            handleAmountDecrease={() =>
-                              handleAmountDecrease(item.productData.id)
-                            }
-                            handleAmountUpdate={(amount) =>
-                              handleAmountUpdate(item.productData.id, amount)
+                            setItemAmount={(amount) =>
+                              handleSetItemAmount(item.productData.id, amount)
                             }
                           />
                         </span>
