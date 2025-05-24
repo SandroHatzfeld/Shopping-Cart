@@ -1,16 +1,19 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom"
 
-export default function CategoryListItem({ name, categories }) {
+export default function CategoryListItem({ name, subcategories }) {
   return (
     <div className="category-item">
-      <NavLink to={categories.name}>{name}</NavLink>
-      <button className="toggleListing"></button>
-      {categories.subcategories ? (
-        categories.subcategories.map((category) => {
+      <div className='category-title'>
+        <NavLink to={name}>{name}</NavLink>
+        <button className="toggleListing"></button>
+      </div>
+      {subcategories ? (
+        subcategories.map((category) => {
           return (
             <CategoryListItem
+              key={category.name}
               name={category.name}
-              categories={category.subcategories}
+              subcategories={category.subsubcategories}
             />
           )
         })

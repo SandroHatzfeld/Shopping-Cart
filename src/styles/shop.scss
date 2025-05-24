@@ -16,7 +16,12 @@ aside {
     padding: 0.5rem 0;
     border-top: 1px solid v.$primaryColor;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    
+    .category-title {
+      display: flex;
+      justify-content: space-between;
+    }
     &:last-child {
       border-bottom: 1px solid v.$primaryColor;
     }

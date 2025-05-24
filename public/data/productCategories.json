@@ -5,7 +5,7 @@
       "subcategories": [
         {
           "name": "drums",
-          "details": [
+          "subcategories": [
             "kits",
             "cymbals",
             "snare drums",
@@ -14,7 +14,7 @@
         },
         {
           "name": "guitars",
-          "details": [
+          "subcategories": [
             "electric",
             "acoustic",
             "accessories"
@@ -22,28 +22,28 @@
         },
         {
           "name": "woodwinds",
-          "details": [
+          "subcategories": [
             "saxophones",
             "accessories"
           ]
         },
         {
           "name": "keyboards",
-          "details": [
+          "subcategories": [
             "digital pianos",
             "portable keyboards"
           ]
         },
         {
           "name": "strings",
-          "details": [
+          "subcategories": [
             "violins",
             "ukuleles"
           ]
         },
         {
           "name": "harmonicas",
-          "details": [
+          "subcategories": [
             "diatonic"
           ]
         }
@@ -54,45 +54,45 @@
       "subcategories": [
         {
           "name": "amplifiers",
-          "details": [
+          "subcategories": [
             "guitar amps"
           ]
         },
         {
           "name": "microphones",
-          "details": [
+          "subcategories": [
             "instrument mics",
             "usb mics"
           ]
         },
         {
           "name": "recording gear",
-          "details": [
+          "subcategories": [
             "bundles",
             "portable recorders"
           ]
         },
         {
           "name": "headphones",
-          "details": [
+          "subcategories": [
             "studio headphones"
           ]
         },
         {
           "name": "controllers",
-          "details": [
+          "subcategories": [
             "midi keyboards"
           ]
         },
         {
           "name": "effects pedals",
-          "details": [
+          "subcategories": [
             "wah"
           ]
         },
         {
           "name": "stands",
-          "details": [
+          "subcategories": [
             "keyboard stands"
           ]
         }
@@ -103,19 +103,19 @@
       "subcategories": [
         {
           "name": "headphones",
-          "details": [
+          "subcategories": [
             "isolation headphones"
           ]
         },
         {
           "name": "earplugs",
-          "details": [
+          "subcategories": [
             "high-fidelity"
           ]
         },
         {
           "name": "in-ear monitors",
-          "details": [
+          "subcategories": [
             "isolating earphones"
           ]
         }
@@ -126,26 +126,26 @@
       "subcategories": [
         {
           "name": "turntables",
-          "details": [
+          "subcategories": [
             "bluetooth",
             "audiophile"
           ]
         },
         {
           "name": "vinyl records",
-          "details": [
+          "subcategories": [
             "rock"
           ]
         },
         {
           "name": "services",
-          "details": [
+          "subcategories": [
             "subscriptions"
           ]
         },
         {
           "name": "accessories",
-          "details": [
+          "subcategories": [
             "cleaning kits"
           ]
         }

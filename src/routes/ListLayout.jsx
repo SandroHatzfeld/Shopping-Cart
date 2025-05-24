@@ -10,7 +10,7 @@ export default function ListLayout() {
         <aside>
           {data.categories.map((category) => {
             return (
-              <CategoryListItem key={category.name} name={category.name} categories={category.subcategories}/>
+              <CategoryListItem key={category.name} name={category.name} subcategories={category.subcategories}/>
             )
           })}
         </aside>
