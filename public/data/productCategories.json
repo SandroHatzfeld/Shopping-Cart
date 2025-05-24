@@ -1,0 +1,155 @@
+{
+  "categories": [
+    {
+      "name": "instruments",
+      "subcategories": [
+        {
+          "name": "drums",
+          "details": [
+            "kits",
+            "cymbals",
+            "snare drums",
+            "accessories"
+          ]
+        },
+        {
+          "name": "guitars",
+          "details": [
+            "electric",
+            "acoustic",
+            "accessories"
+          ]
+        },
+        {
+          "name": "woodwinds",
+          "details": [
+            "saxophones",
+            "accessories"
+          ]
+        },
+        {
+          "name": "keyboards",
+          "details": [
+            "digital pianos",
+            "portable keyboards"
+          ]
+        },
+        {
+          "name": "strings",
+          "details": [
+            "violins",
+            "ukuleles"
+          ]
+        },
+        {
+          "name": "harmonicas",
+          "details": [
+            "diatonic"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "audio equipment",
+      "subcategories": [
+        {
+          "name": "amplifiers",
+          "details": [
+            "guitar amps"
+          ]
+        },
+        {
+          "name": "microphones",
+          "details": [
+            "instrument mics",
+            "usb mics"
+          ]
+        },
+        {
+          "name": "recording gear",
+          "details": [
+            "bundles",
+            "portable recorders"
+          ]
+        },
+        {
+          "name": "headphones",
+          "details": [
+            "studio headphones"
+          ]
+        },
+        {
+          "name": "controllers",
+          "details": [
+            "midi keyboards"
+          ]
+        },
+        {
+          "name": "effects pedals",
+          "details": [
+            "wah"
+          ]
+        },
+        {
+          "name": "stands",
+          "details": [
+            "keyboard stands"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hearing protection",
+      "subcategories": [
+        {
+          "name": "headphones",
+          "details": [
+            "isolation headphones"
+          ]
+        },
+        {
+          "name": "earplugs",
+          "details": [
+            "high-fidelity"
+          ]
+        },
+        {
+          "name": "in-ear monitors",
+          "details": [
+            "isolating earphones"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vinyls & players",
+      "subcategories": [
+        {
+          "name": "turntables",
+          "details": [
+            "bluetooth",
+            "audiophile"
+          ]
+        },
+        {
+          "name": "vinyl records",
+          "details": [
+            "rock"
+          ]
+        },
+        {
+          "name": "services",
+          "details": [
+            "subscriptions"
+          ]
+        },
+        {
+          "name": "accessories",
+          "details": [
+            "cleaning kits"
+          ]
+        }
+      ]
+    }
+  ]
+}

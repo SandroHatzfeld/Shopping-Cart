@@ -1,4 +1,5 @@
-import { NavLink, Outlet, useLoaderData } from "react-router-dom"
+import { Outlet, useLoaderData } from "react-router-dom"
+import CategoryListItem from '../components/shop/CategoryListItem.jsx'
 
 export default function ListLayout() {
   const data = useLoaderData()
@@ -7,14 +8,9 @@ export default function ListLayout() {
     <>
       <main id="list-layout">
         <aside>
-          {data.map((category, index) => {
+          {data.categories.map((category) => {
             return (
-              <div className="category-item" key={index}>
-                <NavLink to={category} >
-                  {category}
-                </NavLink>
-                <button className="toggleListing"></button>
-              </div>
+              <CategoryListItem key={category.name} name={category.name} categories={category.subcategories}/>
             )
           })}
         </aside>

@@ -7,18 +7,17 @@ import ProductListing from "./ProductListing.jsx"
 import ProductDetailPage from "./ProductDetailPage.jsx"
 import ListLayout from "./ListLayout.jsx"
 
+
 const categoryLoader = async () => {
   try {
-    return fetch("https://fakestoreapi.com/products/categories").then((res) =>
-      res.json()
-    )
+    return fetch("/data/productCategories.json").then((res) => res.json())
   } catch (error) {
     console.log("An error occured: " + error)
   }
 }
 const productLoader = async () => {
   try {
-    return fetch("https://fakestoreapi.com/products").then((res) => res.json())
+    return fetch("/data/productItems.json").then((res) => res.json())
   } catch (error) {
     console.log("An error occured: " + error)
   }

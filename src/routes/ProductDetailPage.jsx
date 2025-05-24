@@ -27,8 +27,6 @@ export default function ProductDetailPage() {
           <div className="detail-image-container">
             <div className="detail-image-slide">
               <img src={productData.image} alt="" />
-              <img src={productData.image} alt="" />
-              <img src={productData.image} alt="" />
             </div>
           </div>
           <div className="detail-content">
