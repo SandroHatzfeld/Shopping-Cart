@@ -9,7 +9,7 @@ export default function ProductListItem({item}) {
         to={`/shop/products/${item.id}`}
         className="product-item-image-link"
       >
-        <img src={item.image} alt="" />
+        <img src={item.image} alt={item.title} />
       </Link>
       <div className="product-item-content">
         <Link to={`/shop/products/${item.id}`}>

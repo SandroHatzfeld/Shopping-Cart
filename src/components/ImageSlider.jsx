@@ -13,9 +13,9 @@ export default function ImageSlider() {
           className="slider-content-slide"
           style={{ translate: `${(sliderIndex % sliderItems.length) * -100}%` }}
         >
-          {sliderItems.map((item, index) => {
+          {sliderItems.map((item) => {
             return (
-              <div key={index} className="slider-content-item text-content">
+              <div key={item.title} className="slider-content-item text-content">
                 <h1>{item.title}</h1>
                 <p>{item.text}</p>
                 <LinkButton link={item.link} text={item.linkText}></LinkButton>
@@ -29,8 +29,8 @@ export default function ImageSlider() {
           className="slider-image-slide"
           style={{ translate: `${(sliderIndex % sliderItems.length) * -100}%` }}
         >
-          {sliderItems.map((item, index) => {
-            return <img key={index} src={item.imageUrl} alt={item.linkText} />
+          {sliderItems.map((item) => {
+            return <img key={item.title} src={item.imageUrl} alt={item.linkText} />
           })}
         </div>
         <div className="slider-dots-container">
