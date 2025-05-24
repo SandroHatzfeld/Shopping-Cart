@@ -78,7 +78,6 @@ export default function Cart() {
       item.amount = amount
     })
   })
-  console.log(cartItems)
 
   const handleRemoveItem = useCallback((id) => {
     setCartItems((draft) => {

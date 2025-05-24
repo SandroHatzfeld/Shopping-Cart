@@ -64,9 +64,15 @@ aside {
     height: 39px;
     width: 39px;
   }
+  
+  .amount-input-container {
+    position: relative;
+  }
+
   input {
     -moz-appearance: textfield;
     width: 50px;
+    height: 39px;
     text-align: center;
     border: none;
     border-left: 1px solid v.$primaryColor;
@@ -75,6 +81,35 @@ aside {
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
+    }
+  }
+
+  .alert-tooltip {
+    position: absolute;
+    padding: 0.125rem;
+    width: 125px;
+    top: calc(-100% - 0.5rem);
+    left: 50%;
+    background-color: v.$accentColor;
+    color: v.$lightColor;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    text-align: center;
+
+
+    &.isHidden {
+      opacity: 0;
+    }
+
+    @keyframes hideTooltip {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+
     }
   }
 }
