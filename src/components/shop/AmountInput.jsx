@@ -37,7 +37,7 @@ export default function AmountInput({ itemAmount, setItemAmount }) {
       setItemAmount(99)
       return
     } else if (value < 1) {
-      setAlertText("Sie können nicht weniger als 1 eingeben")
+      setAlertText("Sie können nicht kleiner 1 wählen")
       setIsValid(false)
       setItemAmount(1)
       return
@@ -51,7 +51,7 @@ export default function AmountInput({ itemAmount, setItemAmount }) {
       e.target.blur()
     }
 
-    // only allow numbers
+    // only allow numbers and arrow-keys
     if (
       !e.key.match(/^[0-9]$/) &&
       e.key !== "Backspace" &&
@@ -68,17 +68,15 @@ export default function AmountInput({ itemAmount, setItemAmount }) {
 
   return (
     <div className="amount-wrapper">
+      <AlertTooltip text={alertText} isHidden={isValid} />
       <button onClick={checkAmountDecrease}>-</button>
-      <div className="amount-input-container">
-        <input
-          onChange={(e) => checkAmountUpdate(e.target.value)}
-          onKeyDown={(e) => handleKeyPress(e)}
-          type="number"
-          value={itemAmount}
-          maxLength={3}
-        />
-        <AlertTooltip text={alertText} isHidden={isValid} />
-      </div>
+      <input
+        onChange={(e) => checkAmountUpdate(e.target.value)}
+        onKeyDown={(e) => handleKeyPress(e)}
+        type="number"
+        value={itemAmount}
+        maxLength={3}
+      />
       <button onClick={checkAmountIncrease}>+</button>
     </div>
   )

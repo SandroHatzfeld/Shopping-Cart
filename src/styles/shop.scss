@@ -53,26 +53,25 @@ aside {
 
 }
 .amount-wrapper {
+  $amountElementHeight: 39px;
   height: 100%;
   display: flex;
+  position: relative;
 
   input,
   button {
     background-color: v.$secondaryColor;
+    z-index: 10;
   }
   button {
-    height: 39px;
-    width: 39px;
+    height: $amountElementHeight;
+    width: $amountElementHeight;
   }
   
-  .amount-input-container {
-    position: relative;
-  }
-
   input {
     -moz-appearance: textfield;
     width: 50px;
-    height: 39px;
+    height: $amountElementHeight;
     text-align: center;
     border: none;
     border-left: 1px solid v.$primaryColor;
@@ -87,30 +86,20 @@ aside {
   .alert-tooltip {
     position: absolute;
     padding: 0.125rem;
-    width: 125px;
-    top: calc(-100% - 0.5rem);
+    width: 100%;
+    bottom: $amountElementHeight + 1;
     left: 50%;
     background-color: v.$accentColor;
     color: v.$lightColor;
-    transform: translateX(-50%);
     font-size: 0.75rem;
     text-align: center;
-
-
+    z-index: 5;
+    transform: translateX(-50%);
+    transition: transform ease 0.5s;
+    
     &.isHidden {
-      opacity: 0;
-    }
-
-    @keyframes hideTooltip {
-      0% {
-        opacity: 1;
-      }
-
-      100% {
-        opacity: 0;
-      }
-
-    }
+      transform: translateX(-50%) translateY($amountElementHeight);
+    }   
   }
 }
 
