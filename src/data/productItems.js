@@ -1,0 +1,482 @@
+[
+	{
+		id: 1,
+		title: "Pearl Export Series Drum Kit",
+		price: 799.99,
+		category: {
+			main: "instruments",
+			sub: "drums",
+			detail: "kits"
+		},
+		image: "/assets/images/thumbs/drum_pearl_export.jpg",
+		description: "Complete 5-piece drum kit with cymbals, perfect for beginners and intermediate players. Durable construction and great sound."
+	},
+	{
+		id: 2,
+		title: "Zildjian A Custom Cymbal Pack",
+		price: 549.99,
+		category: {
+			main: "instruments",
+			sub: "drums",
+			detail: "cymbals"
+		},
+		image: "/assets/images/thumbs/drum_zildjian_acustom.jpg",
+		description: "Bright, cutting cymbals with a brilliant finish, suitable for a wide range of musical styles."
+	},
+	{
+		id: 3,
+		title: "Remo Ambassador Drumhead Set",
+		price: 89.50,
+		category: {
+			main: "instruments",
+			sub: "drums",
+			detail: "accessories"
+		},
+		image: "/assets/images/thumbs/drum_remo_ambassador.jpg",
+		description: "Coated drumheads for a warm, open, and resonant sound. Standard sizes included."
+	},
+	{
+		id: 4,
+		title: "Vater 5A Drumsticks (Pair)",
+		price: 9.99,
+		category: {
+			main: "instruments",
+			sub: "drums",
+			detail: "accessories"
+		},
+		image: "/assets/images/thumbs/drum_vater_5a.jpg",
+		description: "Classic 5A drumsticks, made from high-quality hickory for durability and a comfortable feel."
+	},
+	{
+		id: 5,
+		title: "Fender American Professional II Stratocaster",
+		price: 1699.00,
+		category: {
+			main: "instruments",
+			sub: "guitars",
+			detail: "electric"
+		},
+		image: "/assets/images/thumbs/guitar_fender_strat.jpg",
+		description: "Iconic electric guitar with V-Mod II single-coil pickups, deep 'C' neck, and rolled fingerboard edges."
+	},
+	{
+		id: 6,
+		title: "Gibson Les Paul Standard '60s",
+		price: 2499.00,
+		category: {
+			main: "instruments",
+			sub: "guitars",
+			detail: "electric"
+		},
+		image: "/assets/images/thumbs/guitar_gibson_lespaul.jpg",
+		description: "Classic Les Paul with Burstbucker 61R/T pickups, slim taper neck, and nitrocellulose lacquer finish."
+	},
+	{
+		id: 7,
+		title: "Taylor 214ce Acoustic Guitar",
+		price: 1099.00,
+		category: {
+			main: "instruments",
+			sub: "guitars",
+			detail: "acoustic"
+		},
+		image: "/assets/images/thumbs/guitar_taylor_214ce.jpg",
+		description: "Grand Auditorium body shape, solid Sitka spruce top, and ES2 electronics for a versatile and rich acoustic tone."
+	},
+	{
+		id: 8,
+		title: "Boss Katana-50 MkII Guitar Amplifier",
+		price: 279.00,
+		category: {
+			main: "audio equipment",
+			sub: "amplifiers",
+			detail: "guitar amps"
+		},
+		image: "/assets/images/thumbs/audio_boss_katana50.jpg",
+		description: "Versatile 50-watt guitar amplifier with five amp characters, 60 effects, and power control."
+	},
+	{
+		id: 9,
+		title: "Ernie Ball Slinky Electric Guitar Strings",
+		price: 7.99,
+		category: {
+			main: "instruments",
+			sub: "guitars",
+			detail: "accessories"
+		},
+		image: "/assets/images/thumbs/guitar_ernieball_slinky.jpg",
+		description: "Nickel wound electric guitar strings, known for their bright, balanced tone and comfortable feel."
+	},
+	{
+		id: 10,
+		title: "Yamaha YAS-280 Alto Saxophone",
+		price: 1299.00,
+		category: {
+			main: "instruments",
+			sub: "woodwinds",
+			detail: "saxophones"
+		},
+		image: "/assets/images/thumbs/sax_yamaha_yas280.jpg",
+		description: "Excellent entry-level alto saxophone with a lightweight body and improved low B-C# connection for reliability."
+	},
+	{
+		id: 11,
+		title: "Vandoren Java Alto Saxophone Reeds (Box of 5)",
+		price: 29.50,
+		category: {
+			main: "instruments",
+			sub: "woodwinds",
+			detail: "accessories"
+		},
+		image: "/assets/images/thumbs/sax_vandoren_java.jpg",
+		description: "Flexible and vibrant reeds, ideal for jazz and popular music styles, offering a bright and resonant sound."
+	},
+	{
+		id: 12,
+		title: "Selmer S80 C* Alto Saxophone Mouthpiece",
+		price: 179.00,
+		category: {
+			main: "instruments",
+			sub: "woodwinds",
+			detail: "accessories"
+		},
+		image: "/assets/images/thumbs/sax_selmer_s80c.jpg",
+		description: "A classic mouthpiece for alto saxophone, offering a rich and focused tone with excellent projection."
+	},
+	{
+		id: 13,
+		title: "Korg B2 Digital Piano",
+		price: 499.00,
+		category: {
+			main: "instruments",
+			sub: "keyboards",
+			detail: "digital pianos"
+		},
+		image: "/assets/images/thumbs/keyboard_korg_b2.jpg",
+		description: "88-key digital piano with natural weighted hammer action, 12 sounds, and impressive stereo sampled grand piano sounds."
+	},
+	{
+		id: 14,
+		title: "Roland GO:KEYS Music Creation Keyboard",
+		price: 329.00,
+		category: {
+			main: "instruments",
+			sub: "keyboards",
+			detail: "portable keyboards"
+		},
+		image: "/assets/images/thumbs/keyboard_roland_gokeys.jpg",
+		description: "Portable keyboard with over 500 sounds, Loop Mix function, and Bluetooth connectivity for learning and creating music."
+	},
+	{
+		id: 15,
+		title: "Yamaha P-45 Digital Piano",
+		price: 399.00,
+		category: {
+			main: "instruments",
+			sub: "keyboards",
+			detail: "digital pianos"
+		},
+		image: "/assets/images/thumbs/keyboard_yamaha_p45.jpg",
+		description: "Compact and lightweight digital piano with Graded Hammer Standard (GHS) keyboard, perfect for home practice."
+	},
+	{
+		id: 16,
+		title: "Casio CT-X700 Portable Keyboard",
+		price: 199.00,
+		category: {
+			main: "instruments",
+			sub: "keyboards",
+			detail: "portable keyboards"
+		},
+		image: "/assets/images/thumbs/keyboard_casio_ctx700.jpg",
+		description: "61-key portable keyboard with AiX Sound Source, 600 tones, 195 rhythms, and recording functions."
+	},
+	{
+		id: 17,
+		title: "Shure SM57 Dynamic Instrument Microphone",
+		price: 99.00,
+		category: {
+			main: "audio equipment",
+			sub: "microphones",
+			detail: "instrument mics"
+		},
+		image: "/assets/images/thumbs/audio_shure_sm57.jpg",
+		description: "Industry-standard microphone for instruments and vocals, known for its ruggedness and clear sound."
+	},
+	{
+		id: 18,
+		title: "Focusrite Scarlett 2i2 Studio Bundle",
+		price: 259.00,
+		category: {
+			main: "audio equipment",
+			sub: "recording gear",
+			detail: "bundles"
+		},
+		image: "/assets/images/thumbs/audio_focusrite_2i2.jpg",
+		description: "Complete recording package including a 2-in/2-out USB audio interface, condenser microphone, and headphones."
+	},
+	{
+		id: 19,
+		title: "Sennheiser HD 280 Pro Headphones",
+		price: 99.00,
+		category: {
+			main: "audio equipment",
+			sub: "headphones",
+			detail: "studio headphones"
+		},
+		image: "/assets/images/thumbs/audio_sennheiser_hd280.jpg",
+		description: "Closed-back, circumaural headphones designed for professional monitoring applications with excellent isolation."
+	},
+	{
+		id: 20,
+		title: "Zoom H4n Pro Handy Recorder",
+		price: 229.00,
+		category: {
+			main: "audio equipment",
+			sub: "recording gear",
+			detail: "portable recorders"
+		},
+		image: "/assets/images/thumbs/audio_zoom_h4npro.jpg",
+		description: "Portable 4-track audio recorder with built-in X/Y microphones, ideal for recording instruments and ambient sounds."
+	},
+	{
+		id: 21,
+		title: "Vic Firth SIH2 Stereo Isolation Headphones",
+		price: 69.00,
+		category: {
+			main: "accessories",
+			sub: "hearing protection",
+			detail: "headphones"
+		},
+		image: "/assets/images/thumbs/hearing_vicfirth_sih2.jpg",
+		description: "High-quality isolation headphones designed for drummers, offering significant noise reduction and clear audio playback."
+	},
+	{
+		id: 22,
+		title: "Etymotic ER20XS High-Fidelity Earplugs",
+		price: 19.99,
+		category: {
+			main: "accessories",
+			sub: "hearing protection",
+			detail: "earplugs"
+		},
+		image: "/assets/images/thumbs/hearing_etymotic_er20xs.jpg",
+		description: "Reusable earplugs that reduce sound levels evenly while preserving sound quality, perfect for musicians and concert-goers."
+	},
+	{
+		id: 23,
+		title: "M-Audio Oxygen 49 MIDI Keyboard Controller",
+		price: 149.00,
+		category: {
+			main: "audio equipment",
+			sub: "controllers",
+			detail: "midi keyboards"
+		},
+		image: "/assets/images/thumbs/audio_maudio_oxygen49.jpg",
+		description: "49-key USB MIDI keyboard controller with 8 assignable knobs, 9 assignable faders, and 8 velocity-sensitive pads."
+	},
+	{
+		id: 24,
+		title: "Audio-Technica AT-LP120XBT-USB Turntable",
+		price: 349.00,
+		category: {
+			main: "vinyls & players",
+			sub: "turntables",
+			detail: "bluetooth"
+		},
+		image: "/assets/images/thumbs/vinyl_audiotechnica_lp120xbt.jpg",
+		description: "Direct-drive turntable with built-in phono preamp, USB output, and Bluetooth connectivity for versatile listening."
+	},
+	{
+		id: 25,
+		title: "Rega Planar 1 Turntable",
+		price: 475.00,
+		category: {
+			main: "vinyls & players",
+			sub: "turntables",
+			detail: "audiophile"
+		},
+		image: "/assets/images/thumbs/vinyl_rega_planar1.jpg",
+		description: "Entry-level audiophile turntable, known for its simplicity, ease of use, and high-quality sound."
+	},
+	{
+		id: 26,
+		title: "The Beatles - Abbey Road (Vinyl LP)",
+		price: 27.99,
+		category: {
+			main: "vinyls & players",
+			sub: "vinyl records",
+			detail: "rock"
+		},
+		image: "/assets/images/thumbs/vinyl_beatles_abbeyroad.jpg",
+		description: "Classic album from The Beatles, remastered and pressed on high-quality vinyl."
+	},
+	{
+		id: 27,
+		title: "Pink Floyd - The Dark Side of the Moon (Vinyl LP)",
+		price: 32.50,
+		category: {
+			main: "vinyls & players",
+			sub: "vinyl records",
+			detail: "rock"
+		},
+		image: "/assets/images/thumbs/vinyl_pinkfloyd_darksideofthemoon.jpg",
+		description: "One of the best-selling albums of all time, a masterpiece of progressive rock on vinyl."
+	},
+	{
+		id: 28,
+		title: "Eagles - Hotel California (Vinyl LP)",
+		price: 24.99,
+		category: {
+			main: "vinyls & players",
+			sub: "vinyl records",
+			detail: "rock"
+		},
+		image: "/assets/images/thumbs/vinyl_eagles_hotelcalifornia.jpg",
+		description: "Iconic rock album with hits like 'Hotel California' and 'New Kid in Town', on vinyl."
+	},
+	{
+		id: 29,
+		title: "Native Instruments Komplete Kontrol A49",
+		price: 219.00,
+		category: {
+			main: "audio equipment",
+			sub: "controllers",
+			detail: "midi keyboards"
+		},
+		image: "/assets/images/thumbs/audio_nativeinstruments_a49.jpg",
+		description: "Smart keyboard controller with 49 semi-weighted keys, pre-mapped control for KOMPLETE Instruments & Effects."
+	},
+	{
+		id: 30,
+		title: "Stagg SV-200 Violin (4/4 Size)",
+		price: 189.00,
+		category: {
+			main: "instruments",
+			sub: "strings",
+			detail: "violins"
+		},
+		image: "/assets/images/thumbs/other_stagg_violin.jpg",
+		description: "Full-size violin outfit with case, bow, and rosin, suitable for students and beginners."
+	},
+	{
+		id: 31,
+		title: "Mahalo ML2 Kahiko Series Soprano Ukulele",
+		price: 49.00,
+		category: {
+			main: "instruments",
+			sub: "strings",
+			detail: "ukuleles"
+		},
+		image: "/assets/images/thumbs/other_mahalo_ukulele.jpg",
+		description: "Affordable and colorful soprano ukulele, perfect for casual playing and learning."
+	},
+	{
+		id: 32,
+		title: "Hohner Special 20 Harmonica (Key of C)",
+		price: 39.00,
+		category: {
+			main: "instruments",
+			sub: "harmonicas",
+			detail: "diatonic"
+		},
+		image: "/assets/images/thumbs/other_hohner_harmonica.jpg",
+		description: "Diatonic harmonica with a classic sound and comfortable playing experience, ideal for blues and folk."
+	},
+	{
+		id: 33,
+		title: "Shure SE215-CL Sound Isolating Earphones",
+		price: 99.00,
+		category: {
+			main: "hearing protection",
+			sub: "in-ear monitors",
+			detail: "isolating earphones"
+		},
+		image: "/assets/images/thumbs/hearing_shure_se215.jpg",
+		description: "In-ear monitors with dynamic MicroDrivers for detailed sound and impressive sound isolation."
+	},
+	{
+		id: 34,
+		title: "Vic Firth SBAG Drumstick Bag",
+		price: 24.99,
+		category: {
+			main: "instruments",
+			sub: "drums",
+			detail: "accessories"
+		},
+		image: "/assets/images/thumbs/drum_vicfirth_sbag.jpg",
+		description: "Durable and spacious drumstick bag with multiple pockets, perfect for carrying sticks and accessories."
+	},
+	{
+		id: 35,
+		title: "VOX V847-A Wah Pedal",
+		price: 129.00,
+		category: {
+			main: "audio equipment",
+			sub: "effects pedals",
+			detail: "wah"
+		},
+		image: "/assets/images/thumbs/audio_vox_wah.jpg",
+		description: "Classic wah-wah pedal with a distinctive vintage tone, ideal for guitarists."
+	},
+	{
+		id: 36,
+		title: "K&M 18810 Keyboard Stand",
+		price: 89.00,
+		category: {
+			main: "audio equipment",
+			sub: "stands",
+			detail: "keyboard stands"
+		},
+		image: "/assets/images/thumbs/audio_km_keyboardstand.jpg",
+		description: "Robust and stable X-style keyboard stand, adjustable in height for comfortable playing."
+	},
+	{
+		id: 37,
+		title: "Blue Yeti USB Microphone",
+		price: 129.00,
+		category: {
+			main: "audio equipment",
+			sub: "microphones",
+			detail: "usb mics"
+		},
+		image: "/assets/images/thumbs/audio_blue_yeti.jpg",
+		description: "Versatile USB condenser microphone with multiple polar patterns, perfect for vocals, podcasts, and instruments."
+	},
+	{
+		id: 38,
+		title: "Vinyl Me, Please - Subscription (3 Months)",
+		price: 99.00,
+		category: {
+			main: "vinyls & players",
+			sub: "services",
+			detail: "subscriptions"
+		},
+		image: "/assets/images/thumbs/vinyl_vmp_subscription.jpg",
+		description: "Curated vinyl record subscription service, delivering exclusive pressings to your door."
+	},
+	{
+		id: 39,
+		title: "Spin-Clean Record Washer System MkII",
+		price: 79.99,
+		category: {
+			main: "vinyls & players",
+			sub: "accessories",
+			detail: "cleaning kits"
+		},
+		image: "/assets/images/thumbs/vinyl_spinclean_washer.jpg",
+		description: "Manual record cleaning system that effectively removes dirt and grime from vinyl records."
+	},
+	{
+		id: 40,
+		title: "Mapex Mars Series Snare Drum (14x5.5)",
+		price: 149.00,
+		category: {
+			main: "instruments",
+			sub: "drums",
+			detail: "snare drums"
+		},
+		image: "/assets/images/thumbs/drum_mapex_snare.jpg",
+		description: "Maple shell snare drum from the Mapex Mars series, offering a powerful and versatile sound."
+	}
+]
