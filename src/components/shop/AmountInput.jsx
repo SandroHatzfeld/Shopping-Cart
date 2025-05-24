@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import AlertTooltip from "../AlertTooltip.jsx"
 
 export default function AmountInput({ itemAmount, setItemAmount }) {
@@ -7,18 +7,17 @@ export default function AmountInput({ itemAmount, setItemAmount }) {
   const [alertText, setAlertText] = useState("")
 
   const checkAmountIncrease = () => {
-    checkValidity(itemAmount)
-    setItemAmount(itemAmount + 1)
+    const updatedAmount = itemAmount + 1
+    checkValidity(updatedAmount)
   }
 
   const checkAmountDecrease = () => {
-    checkValidity(itemAmount)
-    setItemAmount(itemAmount - 1)
+    const updatedAmount = itemAmount - 1
+    checkValidity(updatedAmount)
   }
 
   const checkAmountUpdate = (input) => {
     checkValidity(input)
-    setItemAmount(input)
   }
 
   const checkValidity = (value) => {
@@ -31,32 +30,39 @@ export default function AmountInput({ itemAmount, setItemAmount }) {
       return
     }
 
-    // only allow numbers
-    if (!value.toString().match(/^[0-9]+$/)) {
-      setAlertText("Bitte nur Zahlen eingeben")
-      setIsValid(false)
-    }
-
     // check for amounts
-    if (parseInt(value) >= maxAmount) {
-      setAlertText("Die Menge wird auf 99 begrenzt")
-      setItemAmount(99)
+    if (value > maxAmount) {
+      setAlertText("Die Menge wurde auf 99 begrenzt")
       setIsValid(false)
+      setItemAmount(99)
       return
-    } else if (parseInt(value) <= 1) {
+    } else if (value < 1) {
       setAlertText("Sie können nicht weniger als 1 eingeben")
       setIsValid(false)
       setItemAmount(1)
       return
     } else {
       setItemAmount(value)
-      
     }
   }
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       e.target.blur()
+    }
+
+    // only allow numbers
+    if (
+      !e.key.match(/^[0-9]$/) &&
+      e.key !== "Backspace" &&
+      e.key !== "ArrowUp" &&
+      e.key !== "ArrowDown" &&
+      e.key !== "ArrowLeft" &&
+      e.key !== "ArrowRight"
+    ) {
+      setAlertText("Bitte nur Zahlen eingeben")
+      setIsValid(false)
+      e.preventDefault()
     }
   }
 
