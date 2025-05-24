@@ -8,12 +8,20 @@ import ProductDetailPage from "./ProductDetailPage.jsx"
 import ListLayout from "./ListLayout.jsx"
 
 const categoryLoader = async () => {
-  return fetch("https://fakestoreapi.com/products/categories").then((res) =>
-    res.json()
-  )
+  try {
+    return fetch("https://fakestoreapi.com/products/categories").then((res) =>
+      res.json()
+    )
+  } catch (error) {
+    console.log("An error occured: " + error)
+  }
 }
 const productLoader = async () => {
-  return fetch("https://fakestoreapi.com/products").then((res) => res.json())
+  try {
+    return fetch("https://fakestoreapi.com/products").then((res) => res.json())
+  } catch (error) {
+    console.log("An error occured: " + error)
+  }
 }
 
 const routes = [

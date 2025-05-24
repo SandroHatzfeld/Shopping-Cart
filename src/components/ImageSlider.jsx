@@ -37,7 +37,7 @@ export default function ImageSlider() {
           {sliderItems.map((item, index) => {
             return (
               <button
-                key={index}
+                key={item.title}
                 onClick={() => setSliderIndex(index)}
                 className={sliderIndex === index ? "active" : ""}
               ></button>
