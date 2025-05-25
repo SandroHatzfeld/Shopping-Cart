@@ -1,213 +1,216 @@
 {
   "categories": [
     {
-      "name": "instruments",
+      "name": "Neuheiten"
+    },
+    {
+      "name": "Instrumente",
       "subcategories": [
         {
-          "name": "drums",
+          "name": "Schlagzeuge",
           "subcategories": [
             {
-              "name": "kits"
+              "name": "Sets"
             },
             {
-              "name": "cymbals"
+              "name": "Becken"
             },
             {
-              "name": "snare drums"
+              "name": "Snare Drums"
             },
             {
-              "name": "accessories"
+              "name": "Zubehör"
             }
           ]
         },
         {
-          "name": "guitars",
+          "name": "Gitarren",
           "subcategories": [
             {
-              "name": "electric"
+              "name": "E-Gitarren"
             },
             {
-              "name": "acoustic"
+              "name": "Akustik"
             },
             {
-              "name": "accessories"
+              "name": "Zubehör"
             }
           ]
         },
         {
-          "name": "woodwinds",
+          "name": "Holzblasinstrumente",
           "subcategories": [
             {
-              "name": "saxophones"
+              "name": "Saxophone"
             },
             {
-              "name": "accessories"
+              "name": "Zubehör"
             }
           ]
         },
         {
-          "name": "keyboards",
+          "name": "Keyboards",
           "subcategories": [
             {
-              "name": "digital pianos"
+              "name": "Digitalpianos"
             },
             {
-              "name": "portable keyboards"
+              "name": "Portable Keyboards"
             }
           ]
         },
         {
-          "name": "strings",
+          "name": "Streichinstrumente",
           "subcategories": [
             {
-              "name": "violins"
+              "name": "Violinen"
             },
             {
-              "name": "ukuleles"
+              "name": "Ukulelen"
             }
           ]
         },
         {
-          "name": "harmonicas",
+          "name": "Mundharmonikas",
           "subcategories": [
             {
-              "name": "diatonic"
+              "name": "Diatonisch"
             }
           ]
         }
       ]
     },
     {
-      "name": "audio equipment",
+      "name": "Audio-Equipment",
       "subcategories": [
         {
-          "name": "amplifiers",
+          "name": "Verstärker",
           "subcategories": [
             {
-              "name": "guitar amps"
+              "name": "Gitarrenverstärker"
             }
           ]
         },
         {
-          "name": "microphones",
+          "name": "Mikrofone",
           "subcategories": [
             {
-              "name": "instrument mics"
+              "name": "Instrumentenmikrofone"
             },
             {
-              "name": "usb mics"
+              "name": "USB-Mikrofone"
             }
           ]
         },
         {
-          "name": "recording gear",
+          "name": "Aufnahme-Equipment",
           "subcategories": [
             {
-              "name": "bundles"
+              "name": "Bundles"
             },
             {
-              "name": "portable recorders"
+              "name": "Portable Recorder"
             }
           ]
         },
         {
-          "name": "headphones",
+          "name": "Kopfhörer",
           "subcategories": [
             {
-              "name": "studio headphones"
+              "name": "Studio-Kopfhörer"
             }
           ]
         },
         {
-          "name": "controllers",
+          "name": "Controller",
           "subcategories": [
             {
-              "name": "midi keyboards"
+              "name": "MIDI Keyboards"
             }
           ]
         },
         {
-          "name": "effects pedals",
+          "name": "Effektpedale",
           "subcategories": [
             {
-              "name": "wah"
+              "name": "Wah"
             }
           ]
         },
         {
-          "name": "stands",
+          "name": "Ständer",
           "subcategories": [
             {
-              "name": "keyboard stands"
+              "name": "Keyboard-Ständer"
             }
           ]
         }
       ]
     },
     {
-      "name": "hearing protection",
+      "name": "Gehörschutz",
       "subcategories": [
         {
-          "name": "headphones",
+          "name": "Kopfhörer",
           "subcategories": [
             {
-              "name": "isolation headphones"
+              "name": "Isolationskopfhörer"
             }
           ]
         },
         {
-          "name": "earplugs",
+          "name": "Ohrstöpsel",
           "subcategories": [
             {
-              "name": "high-fidelity"
+              "name": "High-Fidelity"
             }
           ]
         },
         {
-          "name": "in-ear monitors",
+          "name": "In-Ear-Monitore",
           "subcategories": [
             {
-              "name": "isolating earphones"
+              "name": "Isolierende Ohrhörer"
             }
           ]
         }
       ]
     },
     {
-      "name": "vinyls & players",
+      "name": "Vinyls & Player",
       "subcategories": [
         {
-          "name": "turntables",
+          "name": "Plattenspieler",
           "subcategories": [
             {
-              "name": "bluetooth"
+              "name": "Bluetooth"
             },
             {
-              "name": "audiophile"
+              "name": "Audiophil"
             }
           ]
         },
         {
-          "name": "vinyl records",
+          "name": "Vinyl-Schallplatten",
           "subcategories": [
             {
-              "name": "rock"
+              "name": "Rock"
             }
           ]
         },
         {
-          "name": "services",
+          "name": "Dienste",
           "subcategories": [
             {
-              "name": "subscriptions"
+              "name": "Abonnements"
             }
           ]
         },
         {
-          "name": "accessories",
+          "name": "Zubehör",
           "subcategories": [
             {
-              "name": "cleaning kits"
+              "name": "Reinigungs-Sets"
             }
           ]
         }
