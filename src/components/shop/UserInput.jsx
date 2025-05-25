@@ -29,7 +29,7 @@ export default function UserInput({ itemId }) {
         itemAmount={itemAmount}
         setItemAmount={setItemAmount}
       />
-      <AddToCart handleClick={handleClick} />
+      <AddToCart handleClick={handleClick} confirmMessage={'Wurde hinzugefügt'} />
     </div>
   )
 }
