@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useLoaderData, useParams } from "react-router-dom"
-import UserInput from '../components/shop/UserInput.jsx'
+import UserInput from "../components/shop/UserInput.jsx"
+import priceRendering from "../utils/priceRendering.jsx"
 
 export default function ProductDetailPage() {
   const loaderData = useLoaderData()
@@ -21,25 +22,22 @@ export default function ProductDetailPage() {
   }, [currentProductId, loaderData])
 
   return (
-
-      <main id="product-detail">
-        <div className="detail-wrapper">
-          <div className="detail-image-container">
-            <div className="detail-image-slide">
-              <img src={productData.image} alt="" />
+    <main id="product-detail">
+      <div className="detail-wrapper">
+        <div className="detail-image-container">
+          <img src={productData.image} alt="" />
+        </div>
+        <div className="detail-content">
+          <h1>{productData.title}</h1>
+          <p>{productData.description}</p>
+          <div className="flex-end">
+            <div className="price-wrapper">
+              <p>{productData.price && priceRendering(productData.price)}</p>
             </div>
-          </div>
-          <div className="detail-content">
-            <h1>{productData.title}</h1>
-            <div className="flex-end">
-              <div className="price-wrapper">
-                <p>{productData.price}</p>
-              </div>
-              <UserInput itemId={productData.id}/>
-            </div>
+            <UserInput itemId={productData.id} />
           </div>
         </div>
-      </main>
-
+      </div>
+    </main>
   )
 }
