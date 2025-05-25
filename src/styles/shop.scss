@@ -16,14 +16,18 @@ aside {
     display: flex;
     flex-direction: column;
 
+    &:first-child {
+      border-top: 1px solid v.$primaryColor;
+    }
+    
     .category-level-1,
     .category-level-2 {
       margin-left: 1rem;
+      
     }
 
     .category-title {
       padding: 0.5rem 0;
-      // border-top: 1px solid v.$primaryColor;
       border-bottom: 1px solid v.$primaryColor;
       display: flex;
       justify-content: space-between;
