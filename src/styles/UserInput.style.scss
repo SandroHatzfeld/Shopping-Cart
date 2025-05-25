@@ -2,8 +2,8 @@
 @use "variables" as v;
 
 @mixin tabletBreakpoint {
-  @media (max-width:990px) {
-    @content
+  @media (max-width: 990px) {
+    @content;
   }
 }
 
@@ -15,13 +15,14 @@
 }
 
 .amount-wrapper {
-  $amountElementHeight: 39px;
-  @include tabletBreakpoint() {
-        $amountElementHeight: 25px;
-      }
+  --amountElementHeight: 39px;
   height: 100%;
   display: flex;
   position: relative;
+
+ @include tabletBreakpoint() {
+    --amountElementHeight: 25px;
+  }
 
   input,
   button {
@@ -29,14 +30,14 @@
     z-index: 10;
   }
   button {
-    height: $amountElementHeight;
-    width: $amountElementHeight;
+    height: var(--amountElementHeight);
+    width: var(--amountElementHeight);
   }
 
   input {
     -moz-appearance: textfield;
     width: 50px;
-    height: $amountElementHeight;
+    height: var(--amountElementHeight);
     text-align: center;
     border: none;
     border-left: 1px solid v.$primaryColor;
@@ -52,7 +53,7 @@
     position: absolute;
     padding: 0.125rem;
     width: 100%;
-    bottom: $amountElementHeight + 1;
+    bottom: var(--amountElementHeight);
     left: 50%;
     background-color: v.$accentColor;
     color: v.$lightColor;
@@ -63,7 +64,7 @@
     transition: transform ease 0.5s;
 
     &.isHidden {
-      transform: translateX(-50%) translateY($amountElementHeight);
+      transform: translateX(-50%) translateY(var(--amountElementHeight));
     }
   }
 }
