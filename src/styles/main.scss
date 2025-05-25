@@ -12,11 +12,21 @@
     format("truetype");
 }
 
+@mixin tabletBreakpoint {
+  @media (max-width:990px) {
+    @content
+  }
+}
+
 :root {
   font-size: 20px;
   font-family: "Roboto", "Times New Roman", Times, serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
+
+  @include tabletBreakpoint {
+    font-size: 14px;
+  }
 }
 
 html,

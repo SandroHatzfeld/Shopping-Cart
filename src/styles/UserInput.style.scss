@@ -1,6 +1,12 @@
 @use "sass:color";
 @use "variables" as v;
 
+@mixin tabletBreakpoint {
+  @media (max-width:990px) {
+    @content
+  }
+}
+
 .user-input {
   align-self: flex-end;
   justify-self: flex-end;
@@ -10,6 +16,9 @@
 
 .amount-wrapper {
   $amountElementHeight: 39px;
+  @include tabletBreakpoint() {
+        $amountElementHeight: 25px;
+      }
   height: 100%;
   display: flex;
   position: relative;
