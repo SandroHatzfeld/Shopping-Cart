@@ -6,45 +6,73 @@
         {
           "name": "drums",
           "subcategories": [
-            {"name":"kits"},
-            {"name":"cymbals"},
-            {"name":"snare drums"},
-            {"name":"accessories"}
+            {
+              "name": "kits"
+            },
+            {
+              "name": "cymbals"
+            },
+            {
+              "name": "snare drums"
+            },
+            {
+              "name": "accessories"
+            }
           ]
         },
         {
           "name": "guitars",
           "subcategories": [
-            {"name":"electric"},
-            {"name":"acoustic"},
-            {"name":"accessories"}
+            {
+              "name": "electric"
+            },
+            {
+              "name": "acoustic"
+            },
+            {
+              "name": "accessories"
+            }
           ]
         },
         {
           "name": "woodwinds",
           "subcategories": [
-            {"name":"saxophones"},
-            {"name":"accessories"}
+            {
+              "name": "saxophones"
+            },
+            {
+              "name": "accessories"
+            }
           ]
         },
         {
           "name": "keyboards",
           "subcategories": [
-            {"name":"digital pianos"},
-            {"name":"portable keyboards"}
+            {
+              "name": "digital pianos"
+            },
+            {
+              "name": "portable keyboards"
+            }
           ]
         },
         {
           "name": "strings",
           "subcategories": [
-            {"name":"violins"},
-            {"name":"ukuleles"}
+            {
+              "name": "violins"
+            },
+            {
+              "name": "ukuleles"
+            }
           ]
         },
         {
           "name": "harmonicas",
           "subcategories": [
-            {"name":"diatonic"}
+            {
+              "name": "diatonic"
+            }
           ]
         }
       ]
@@ -55,45 +83,63 @@
         {
           "name": "amplifiers",
           "subcategories": [
-            {"name":"guitar amps"}
+            {
+              "name": "guitar amps"
+            }
           ]
         },
         {
           "name": "microphones",
           "subcategories": [
-            {"name":"instrument mics"},
-            {"name":"usb mics"}
+            {
+              "name": "instrument mics"
+            },
+            {
+              "name": "usb mics"
+            }
           ]
         },
         {
           "name": "recording gear",
           "subcategories": [
-            {"name":"bundles"},
-            {"name":"portable recorders"}
+            {
+              "name": "bundles"
+            },
+            {
+              "name": "portable recorders"
+            }
           ]
         },
         {
           "name": "headphones",
           "subcategories": [
-            {"name":"studio headphones"}
+            {
+              "name": "studio headphones"
+            }
           ]
         },
         {
           "name": "controllers",
           "subcategories": [
-            {"name":"midi keyboards"}
+            {
+              "name": "midi keyboards"
+            }
           ]
         },
         {
           "name": "effects pedals",
           "subcategories": [
-            {"name":"wah"}
+            {
+              "name": "wah"
+            }
           ]
         },
         {
           "name": "stands",
           "subcategories": [
-            {"name":"keyboard stands"}
+            {
+              "name": "keyboard stands"
+            }
           ]
         }
       ]
@@ -104,19 +150,25 @@
         {
           "name": "headphones",
           "subcategories": [
-            {"name":"isolation headphones"}
+            {
+              "name": "isolation headphones"
+            }
           ]
         },
         {
           "name": "earplugs",
           "subcategories": [
-            {"name":"high-fidelity"}
+            {
+              "name": "high-fidelity"
+            }
           ]
         },
         {
           "name": "in-ear monitors",
           "subcategories": [
-            {"name":"isolating earphones"}
+            {
+              "name": "isolating earphones"
+            }
           ]
         }
       ]
@@ -127,26 +179,36 @@
         {
           "name": "turntables",
           "subcategories": [
-            {"name":"bluetooth"},
-            {"name":"audiophile"}
+            {
+              "name": "bluetooth"
+            },
+            {
+              "name": "audiophile"
+            }
           ]
         },
         {
           "name": "vinyl records",
           "subcategories": [
-            {"name":"rock"}
+            {
+              "name": "rock"
+            }
           ]
         },
         {
           "name": "services",
           "subcategories": [
-            {"name":"subscriptions"}
+            {
+              "name": "subscriptions"
+            }
           ]
         },
         {
           "name": "accessories",
           "subcategories": [
-            {"name":"cleaning kits"}
+            {
+              "name": "cleaning kits"
+            }
           ]
         }
       ]
