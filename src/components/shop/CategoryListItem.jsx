@@ -1,8 +1,15 @@
-import { useState } from "react"
-import { NavLink } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { NavLink, useParams } from "react-router-dom"
 
 export default function CategoryListItem({ level, name, subcategories }) {
   const [isCollapsed, setIsCollapsed] = useState(true)
+  const curCategory = useParams()
+  
+  useEffect(() => {
+    if(curCategory.category === name) {
+      setIsCollapsed(false)
+    }
+  }, [name,curCategory])
 
   const handleToggleList = () => {
     setIsCollapsed(!isCollapsed)
@@ -17,6 +24,7 @@ export default function CategoryListItem({ level, name, subcategories }) {
       <div className="category-title">
         <NavLink
           to={name}
+          state={{isActive: true}}
         >
           {name}
         </NavLink>
