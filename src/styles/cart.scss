@@ -16,6 +16,9 @@
     color: v.$primaryColor;
   }
 
+  h1 {
+    margin-bottom: 0;
+  }
   hr {
     width: 100%;
   }
@@ -23,7 +26,7 @@
   section {
     display: flex;
     flex-direction: column;
-    
+
     .cart-item-container {
       display: flex;
       flex-direction: column;
@@ -32,7 +35,7 @@
 
     .cart-item {
       padding: 0.5rem;
-      display: flex;      
+      display: flex;
       height: 200px;
       gap: 1rem;
       border: 1px solid v.$primaryColor;
@@ -56,6 +59,7 @@
       }
       .cart-item-title {
         font-weight: bold;
+        margin-top: 0;
       }
       .cart-item-price {
         align-self: flex-end;
@@ -63,7 +67,7 @@
         margin-left: auto;
         display: flex;
         align-items: center;
-        gap: 1rem
+        gap: 1rem;
       }
 
       .cart-item-remove {

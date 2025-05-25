@@ -71,21 +71,21 @@ export default function Cart() {
       <section>
         {cartItems.length == 0 && purchaseDone == false ? (
           <>
-            <h2>Ihr Warenkorb ist leider leer</h2>
+            <h1>Ihr Warenkorb ist leider leer</h1>
             <hr />
             <p>Entdecken Sie jetzt unsere große Produktauswahl!</p>
             <LinkButton link="/shop/" text="Jetzt durchstöbern" />
           </>
         ) : purchaseDone ? (
           <>
-            <h2>Danke für Ihren Einkauf!</h2>
+            <h1>Danke für Ihren Einkauf!</h1>
             <hr />
             <p>Kennen Sie schon unsere Neuheiten?</p>
             <LinkButton link="/shop/Neuheiten" text="Jetzt entdecken" />
           </>
         ) : (
           <>
-            <h2>Ihre gewählten Produkte</h2>
+            <h1>Ihre gewählten Produkte</h1>
             <hr />
             <div className="cart-item-container">
               {cartItemData.map((item) => {
