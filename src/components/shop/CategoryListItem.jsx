@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom"
 
 export default function CategoryListItem({ level, name, subcategories }) {
+  
   return (
-    <div className="category-item" style={{paddingLeft: `${level}rem`}}>
+    <div className="category-item" style={{marginLeft: `${level}rem`}}>
       <div className="category-title">
         <NavLink to={name}>{name}</NavLink>
         <button className="toggleListing"></button>
@@ -14,7 +15,7 @@ export default function CategoryListItem({ level, name, subcategories }) {
               level={level + 1}
               key={category.name}
               name={category.name}
-              subcategories={category.subsubcategories}
+              subcategories={category.subcategories}
             />
           )
         })

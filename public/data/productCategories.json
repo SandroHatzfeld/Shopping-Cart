@@ -6,45 +6,45 @@
         {
           "name": "drums",
           "subcategories": [
-            "kits",
-            "cymbals",
-            "snare drums",
-            "accessories"
+            {"name":"kits"},
+            {"name":"cymbals"},
+            {"name":"snare drums"},
+            {"name":"accessories"}
           ]
         },
         {
           "name": "guitars",
           "subcategories": [
-            "electric",
-            "acoustic",
-            "accessories"
+            {"name":"electric"},
+            {"name":"acoustic"},
+            {"name":"accessories"}
           ]
         },
         {
           "name": "woodwinds",
           "subcategories": [
-            "saxophones",
-            "accessories"
+            {"name":"saxophones"},
+            {"name":"accessories"}
           ]
         },
         {
           "name": "keyboards",
           "subcategories": [
-            "digital pianos",
-            "portable keyboards"
+            {"name":"digital pianos"},
+            {"name":"portable keyboards"}
           ]
         },
         {
           "name": "strings",
           "subcategories": [
-            "violins",
-            "ukuleles"
+            {"name":"violins"},
+            {"name":"ukuleles"}
           ]
         },
         {
           "name": "harmonicas",
           "subcategories": [
-            "diatonic"
+            {"name":"diatonic"}
           ]
         }
       ]
@@ -55,45 +55,45 @@
         {
           "name": "amplifiers",
           "subcategories": [
-            "guitar amps"
+            {"name":"guitar amps"}
           ]
         },
         {
           "name": "microphones",
           "subcategories": [
-            "instrument mics",
-            "usb mics"
+            {"name":"instrument mics"},
+            {"name":"usb mics"}
           ]
         },
         {
           "name": "recording gear",
           "subcategories": [
-            "bundles",
-            "portable recorders"
+            {"name":"bundles"},
+            {"name":"portable recorders"}
           ]
         },
         {
           "name": "headphones",
           "subcategories": [
-            "studio headphones"
+            {"name":"studio headphones"}
           ]
         },
         {
           "name": "controllers",
           "subcategories": [
-            "midi keyboards"
+            {"name":"midi keyboards"}
           ]
         },
         {
           "name": "effects pedals",
           "subcategories": [
-            "wah"
+            {"name":"wah"}
           ]
         },
         {
           "name": "stands",
           "subcategories": [
-            "keyboard stands"
+            {"name":"keyboard stands"}
           ]
         }
       ]
@@ -104,19 +104,19 @@
         {
           "name": "headphones",
           "subcategories": [
-            "isolation headphones"
+            {"name":"isolation headphones"}
           ]
         },
         {
           "name": "earplugs",
           "subcategories": [
-            "high-fidelity"
+            {"name":"high-fidelity"}
           ]
         },
         {
           "name": "in-ear monitors",
           "subcategories": [
-            "isolating earphones"
+            {"name":"isolating earphones"}
           ]
         }
       ]
@@ -127,26 +127,26 @@
         {
           "name": "turntables",
           "subcategories": [
-            "bluetooth",
-            "audiophile"
+            {"name":"bluetooth"},
+            {"name":"audiophile"}
           ]
         },
         {
           "name": "vinyl records",
           "subcategories": [
-            "rock"
+            {"name":"rock"}
           ]
         },
         {
           "name": "services",
           "subcategories": [
-            "subscriptions"
+            {"name":"subscriptions"}
           ]
         },
         {
           "name": "accessories",
           "subcategories": [
-            "cleaning kits"
+            {"name":"cleaning kits"}
           ]
         }
       ]
