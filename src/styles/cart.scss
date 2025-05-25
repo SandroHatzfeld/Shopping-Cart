@@ -1,11 +1,30 @@
 @use "sass:color";
 @use "variables" as v;
 
+@mixin tabletBreakpoint {
+  @media (max-width: 990px) {
+    @content;
+  }
+}
+
+@mixin mobileBreakpoint {
+  @media (max-width: 550px) {
+    @content;
+  }
+}
+
 #cart {
   padding: 2rem;
   grid-template-columns: 2fr 1fr;
   background-color: v.$secondaryColor;
   gap: 1rem;
+
+  @include tabletBreakpoint() {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-content: start;
+  }
 
   section,
   aside {
@@ -39,12 +58,24 @@
       height: 200px;
       gap: 1rem;
       border: 1px solid v.$primaryColor;
+      position: relative;
+
+      @include mobileBreakpoint() {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+      }
 
       img {
         height: 100%;
         width: 25%;
         object-fit: contain;
         object-position: center;
+
+        @include mobileBreakpoint() {
+          width: 100%;
+          height: 200px;
+        }
       }
 
       .cart-item-content {
@@ -77,6 +108,8 @@
         width: 1rem;
         background-color: white;
         border-radius: 100%;
+        padding-left: 1rem;
+        
       }
     }
   }

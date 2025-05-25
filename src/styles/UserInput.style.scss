@@ -53,7 +53,7 @@
     position: absolute;
     padding: 0.125rem;
     width: 100%;
-    bottom: var(--amountElementHeight);
+    bottom: calc(var(--amountElementHeight) + 1px);
     left: 50%;
     background-color: v.$accentColor;
     color: v.$lightColor;
