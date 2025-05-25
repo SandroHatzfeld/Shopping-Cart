@@ -30,7 +30,7 @@
     "categories": [
       "Instrumente",
       "Schlagzeuge",
-      "Zubehör"
+      "Schlagzeug-Zubehör"
     ],
     "image": "/assets/images/products/drum_remo_ambassador.jpg",
     "description": "Beschichtete Schlagzeugfelle für einen warmen, offenen und resonanten Klang. Standardgrößen enthalten."
@@ -42,7 +42,7 @@
     "categories": [
       "Instrumente",
       "Schlagzeuge",
-      "Zubehör"
+      "Schlagzeug-Zubehör"
     ],
     "image": "/assets/images/products/drum_vater_5a.jpg",
     "description": "Klassische 5A Drumsticks, hergestellt aus hochwertigem Hickory für Langlebigkeit und ein angenehmes Gefühl."
@@ -102,7 +102,7 @@
     "categories": [
       "Instrumente",
       "Gitarren",
-      "Zubehör"
+      "Gitarren-Zubehör"
     ],
     "image": "/assets/images/products/guitar_ernieball_slinky.jpg",
     "description": "Nickel-gewickelte E-Gitarrensaiten, bekannt für ihren hellen, ausgewogenen Klang und angenehmes Spielgefühl."
@@ -126,7 +126,7 @@
     "categories": [
       "Instrumente",
       "Holzblasinstrumente",
-      "Zubehör"
+      "Holzblas-Zubehör"
     ],
     "image": "/assets/images/products/sax_vandoren_java.jpg",
     "description": "Flexible und lebendige Blätter, ideal für Jazz und Popmusikstile, bieten einen hellen und resonanten Klang."
@@ -138,7 +138,7 @@
     "categories": [
       "Instrumente",
       "Holzblasinstrumente",
-      "Zubehör",
+      "Holzblas-Zubehör",
       "Neuheiten"
     ],
     "image": "/assets/images/products/sax_selmer_s80c.jpg",
@@ -404,7 +404,7 @@
     "categories": [
       "Instrumente",
       "Schlagzeuge",
-      "Zubehör",
+      "Schlagzeug-Zubehör",
       "Neuheiten"
     ],
     "image": "/assets/images/products/drum_vicfirth_sbag.jpg",
