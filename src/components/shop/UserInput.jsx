@@ -2,6 +2,7 @@ import AmountInput from "./AmountInput.jsx"
 import AddToCart from "./AddToCart.jsx"
 import { useContext, useState } from "react"
 import { ShopContext } from "../../routes/Root.jsx"
+import '../../styles/UserInput.style.scss'
 
 export default function UserInput({ itemId }) {
   const { cartItems, setCartItems } = useContext(ShopContext)
