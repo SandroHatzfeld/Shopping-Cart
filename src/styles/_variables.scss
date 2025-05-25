@@ -6,11 +6,11 @@ $lightColor: #fefefe;
 $navHeight: 80px;
 
 @mixin fontGradeBold {
-	&:hover {
+	&:hover, &.active {
     font-weight: 600;
   }
 	@supports (font-variation-settings: 'GRAD' 150) {
-    &:hover {
+    &:hover, &.active {
       font-weight: 400;
       font-variation-settings: 'GRAD' 150;
     }

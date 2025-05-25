@@ -16,10 +16,11 @@ aside {
     display: flex;
     flex-direction: column;
 
-    .category-level-1, .category-level-2 {
+    .category-level-1,
+    .category-level-2 {
       margin-left: 1rem;
     }
-    
+
     .category-title {
       padding: 0.5rem 0;
       // border-top: 1px solid v.$primaryColor;
@@ -27,7 +28,6 @@ aside {
       display: flex;
       justify-content: space-between;
     }
-
 
     a {
       color: v.$primaryColor;
@@ -39,12 +39,20 @@ aside {
     .toggleListing {
       height: 25px;
       width: 25px;
+      transform: rotate(180deg);
+      transition: transform ease 0.3s;
       background-color: transparent;
       background-image: url("./assets/icons/arrow.svg");
     }
 
-    &.collapsed > * {
-      display: none;
+    &.collapsed {
+      .category-item {
+        display: none;
+      }
+
+      .toggleListing {
+        transform: rotate(0);
+      }
     }
   }
 }
