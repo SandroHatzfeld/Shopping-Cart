@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 export default function CategoryListItem({ level, name, subcategories }) {
   
   return (
-    <div className="category-item" style={{marginLeft: `${level}rem`}}>
+    <div className={`category-item category-level-${level}`}>
       <div className="category-title">
         <NavLink to={name}>{name}</NavLink>
         <button className="toggleListing"></button>
