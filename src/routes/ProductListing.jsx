@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLoaderData, useParams } from "react-router-dom"
-import ProductListItem from '../components/shop/ProductListItem.jsx'
+import ProductListItem from "../components/shop/ProductListItem.jsx"
 
 export default function ProductListing() {
   const loaderData = useLoaderData()
@@ -13,22 +13,22 @@ export default function ProductListing() {
       setProductData(loaderData)
       return
     }
-    const filteredProducts = loaderData.filter(
-      (item) => item.category === currentRoute.category
-    )
 
+    const filteredProducts = loaderData.filter((product) =>
+      product.categories.some(
+        (category) => category === currentRoute.category
+      )
+    )
+    
     setProductData(filteredProducts)
   }, [currentRoute, loaderData])
-
 
   return (
     <div className="listing-wrapper">
       <p className="breadcrumbs">Hier sollen Breadcrumbs stehen</p>
       <div className="listing-content">
         {productData.map((item) => {
-          return (
-            <ProductListItem key={item.id} item={item} />
-          )
+          return <ProductListItem key={item.id} item={item} />
         })}
       </div>
     </div>
