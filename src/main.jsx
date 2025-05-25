@@ -5,6 +5,8 @@ import routes from './routes/routes.jsx'
 import './styles/main.scss'
 import './styles/home.scss'
 import './styles/shop.scss'
+import './styles/cart.scss'
+import './styles/pdp.scss'
 
 const router = createBrowserRouter(routes)
 
