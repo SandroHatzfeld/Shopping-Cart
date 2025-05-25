@@ -81,7 +81,7 @@ export default function Cart() {
             <h2>Danke für Ihren Einkauf!</h2>
             <hr />
             <p>Kennen Sie schon unsere Neuheiten?</p>
-            <LinkButton link="/shop/electronics" text="Jetzt entdecken" />
+            <LinkButton link="/shop/Neuheiten" text="Jetzt entdecken" />
           </>
         ) : (
           <>
