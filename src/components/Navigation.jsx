@@ -4,7 +4,7 @@ import { ShopContext } from '../routes/Root.jsx'
 import { useContext } from 'react'
 
 export default function Navigation() {
-  const {cartItems, setCartItems} = useContext(ShopContext)
+  const {cartItems} = useContext(ShopContext)
 
   const cartItemAmount = cartItems.reduce((total, cur) => total + cur.amount, 0)
   
