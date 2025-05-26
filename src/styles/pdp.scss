@@ -1,16 +1,37 @@
 @use "sass:color";
 @use "variables" as v;
 
+@mixin mobileBreakpoint {
+  @media (max-width: 550px) {
+    @content;
+  }
+}
+
+@mixin tabletBreakpoint {
+  @media (max-width:990px) {
+    @content
+  }
+}
+
 #product-detail {
   min-height: calc(100vh - v.$navHeight * 2);
 
   padding: 2rem;
   background-color: v.$secondaryColor;
 
+  @include tabletBreakpoint() {
+    padding:1rem
+  }
+
   .detail-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
+
+    @include mobileBreakpoint() {
+      grid-template-columns: 1fr;
+      
+    }
 
     .detail-content {
       padding: 1rem;
