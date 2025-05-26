@@ -16,7 +16,7 @@ export default function Navigation() {
         <NavLink className="text-effect" to='/shop'>Shop</NavLink>
       </div>
 			<div >
-				<LinkImage image='./assets/icons/profile_white.svg' alt='Zum Profil' link='profile' classes='icon'/>
+				<LinkImage image='./assets/icons/profile_white.svg' alt='Zum Profil' link='/' classes='icon'/>
 				<LinkImage image='./assets/icons/cart_white.svg' alt='Zum Warenkorb' link='cart' classes='icon cart' itemCount={cartItemAmount} />
 			</div>
     </nav>
