@@ -51,9 +51,7 @@ export default function Cart() {
   const handleSetItemAmount = useCallback((id, amount) => {
     setCartItems((draft) => {
       const item = draft.find((cartItem) => cartItem.id === id)
-
-      console.log(amount);
-      
+     
       item.amount = amount
     })
   })
