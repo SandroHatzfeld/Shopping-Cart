@@ -36,6 +36,7 @@
     transform: rotate(90deg);
     translate: all ease 0.3s;
     left: 190px;
+    z-index: 9999;
 
     @include mobileBreakpoint() {
       display: block;
