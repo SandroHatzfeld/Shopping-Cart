@@ -2,6 +2,8 @@
 @use "variables" as v;
 
 #product-detail {
+  min-height: calc(100vh - v.$navHeight * 2);
+
   padding: 2rem;
   background-color: v.$secondaryColor;
 

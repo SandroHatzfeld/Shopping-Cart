@@ -1,8 +1,16 @@
 @use "sass:color";
 @use "variables" as v;
 
-#home {
-  grid-template-rows: repeat(2, 1fr);
+@mixin mobileBreakpoint {
+  @media (max-width: 550px) {
+    @content;
+  }
+}
+
+@mixin tabletBreakpoint {
+  @media (max-width: 990px) {
+    @content;
+  }
 }
 
 .text-content {
@@ -16,6 +24,13 @@
 .slider-image-container {
   overflow: hidden;
   position: relative;
+  max-height: 600px;
+}
+
+.slider-content-container {
+  @include mobileBreakpoint() {
+    grid-row: 2 / 3;
+  }
 }
 
 .slider-content-slide,
@@ -27,7 +42,6 @@
 }
 
 .slider-image-slide {
-  align-content: center;
   z-index: 0;
 
   img {
@@ -82,6 +96,9 @@
 }
 
 .welcome {
+  @include mobileBreakpoint() {
+    grid-template-rows: 400px auto;
+  }
   .image-container {
     height: 100%;
     width: 100%;
@@ -89,6 +106,9 @@
     display: flex;
     align-items: center;
 
+    @include mobileBreakpoint() {
+      min-height: 250px;
+    }
     img {
       width: 100%;
       height: 100%;

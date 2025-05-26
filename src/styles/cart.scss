@@ -16,6 +16,8 @@
 #cart {
   padding: 2rem;
   grid-template-columns: 2fr 1fr;
+  display: grid;
+  min-height: calc(100vh - v.$navHeight * 2);
   background-color: v.$secondaryColor;
   gap: 1rem;
 

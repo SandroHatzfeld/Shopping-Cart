@@ -168,17 +168,28 @@ nav {
 
 main {
   margin-top: v.$navHeight;
-  min-height: calc(100vh - v.$navHeight * 2);
-  display: grid;
 }
 
 section {
   width: 100%;
-  height: 100%;
-  max-height: 590px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   background-color: v.$secondaryColor;
+  
+  @media (min-width: 550px) {
+    height: 600px;
+  }
+  
+
+  @include tabletBreakpoint() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobileBreakpoint() {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 250px;
+    max-height: none;
+  }
 }
 
 footer {
@@ -193,4 +204,8 @@ footer {
   a {
     color: inherit;
   }
+}
+
+#errorPage {
+  min-height: calc(100vh - v.$navHeight * 2);
 }
